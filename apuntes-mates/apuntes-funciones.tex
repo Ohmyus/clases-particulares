@@ -1,0 +1,45 @@
+%! TEX root apuntes-funciones.tex
+\documentclass[ %Declaración de qué tipo de documento va a ser
+    oneside,    %Páginas pares e impares iguales, twoside para diferenciarlas
+    10pt        %Tamaño de la fuente básica. Si es pequeño poner 12pt.
+]{apuntes} %Esta es una clase de documento nueva basada en la clase básica article, que carga muchos paquetes para poder pintar tablas, cargar figuras, ajustar la disposición de la página, etc. Escrito por mí
+
+\begin{document} %A partir de aquí comienza el documento
+\begin{center}  %entre \begin y \end todo estará centrado
+    \LARGE \textbf{Apuntes de Funciones} %Texto muy grande y en negrita
+\end{center}
+
+\section{Definición de función} %encabezado 1
+Una función es una aplicación matemática que recibe uno o varios argumentos de entrada y los relaciona con uno o varios argumentos de salida, de forma que cada argumento de entrada corresponde con un argumento de salida. Matemáticamente, al definir una función también se especifica qué conjuntos de números son el de procedencia y el de destino:
+\[\begin{array}{c} f: x \to f(x)\\
+\mathbb{R} \to \mathbb{R}\end{array}\]
+Explicando lo que quiere decir: $f$ es una función que toma un número $x$ de perteneciente a los números reales ($\mathbb{R}$) y devuelve $f(x)$, que también es un número real. Pero esta notación no es necesaria aprenderla. Generalmente se definirá una función $f(x)$ directamente con su transformación:
+\[f(x) = 3x^2 - 1 + \ln(x)\]
+La inmensa mayoría de las funciones elementales son funciones reales. La forma de construir funciones nuevas es incluyendo funciones elementales en la definición, o mediante composición de funciones. Es por esto, que \underline{las funciones con las que trabajaremos serán siempre funciones reales}. \todo{Incluir gráficos de funciones}
+
+\section{Dominio y Recorrido de una función} %encabezado 1
+El dominio y el recorrido de una función son conjuntos. Como estamos trabajando con \textbf{funciones reales}, serán conjuntos de números reales.
+\subsection{Dominio de una función}
+Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluiddos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio. \todo{Ejemplo de cálculo del dominio}
+
+\subsection{Recorrido de una función} %encabezado 2
+También conocido como imagen, el recorrido de una función es el conjunto de todos los posibles valores que puede tomar $f(x)$ para todas las $x$ de su dominio. Es más complicado de calcular analíticamente, por lo que suele preguntarse en ejercicios de forma gráfica. \todo{Cálculo del recorrido}
+
+\section{Operaciones con funciones} %encabezado 1
+Siempre que existan dos funciones $f(x)$ y $g(x)$ conocidas, se puede definir una nueva función $h(x)$ a partir de las anteriores, utilizando cualquiera de las operaciones elementales:
+\renewcommand{\arraystretch}{1.5}
+\[
+\begin{array}{clcl}
+\bullet & h(x) = f(x) + g(x) & \bullet & h(x) = f(x) - g(x) \\
+\bullet & h(x) = f(x) \cdot g(x) & \bullet & h(x) = \frac{f(x)}{g(x)} \\
+\end{array}
+\]
+
+\section{Composición de funciones}
+Otra forma de escribir funciones más complejas es tomar definiciones de funciones elementales, y utilizar como argumento de entrada otra función elemental. Por ejemplo, siendo $f(x)$ y $g(x)$ dos funciones reales tales que:
+\par \(f(x) = \ln(x)\;\;\;\;\;g(x) = x^2 - 1\)
+\par Se puede definir entonces \(h(x) = (g \circ f) (x)\), que se lee como $f$ compuesto con $g$, e indica la expresión de $g(f(x))$. Entonces, esta nueva función sería:
+\[g(f(x)) = f(x)^2 - 1 = {\ln(x)}^2 - 1\]
+
+\listoftodos %Este comando se encarga de generar (donde se coloque, en este caso es al final del documento) la lista recopilando todos los \todo{} que se hayan ido escribiendo. 
+\end{document}
