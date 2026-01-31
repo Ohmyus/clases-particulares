@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1769283215.36138 "d:/Users/Pablo/Documentos/clases/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1769283216.92188 0
-  "apuntes-funciones.tex" 1769283214 4098 316f63c33bd1d3cbea5e9232b6ada30c ""
+["pdflatex"] 1769849115.2009 "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1769849116.75911 0
+  "apuntes-funciones.tex" 1769849114 5012 6127deb92a511e9ca94fd56d13312ba2 ""
   "apuntes.cls" 1769283211 4431 18902ade14dcd3b270689fc18c707031 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1756239324 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1756239324 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -205,10 +205,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756245672 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756245975 3605803 3405118f97e4dabe07936f25e8c4e59e ""
   "c:/texlive/2025/texmf.cnf" 1756240331 713 e69b156964470283e0530f5060668171 ""
-  "d:/Users/Pablo/Documentos/clases/apuntes-mates/apuntes-funciones.tex" 1769283214 4098 316f63c33bd1d3cbea5e9232b6ada30c ""
-  "out/apuntes-funciones.aux" 1769283216 1638 efb26703837a3aa4dd938d1c20bf0fbd "pdflatex"
-  "out/apuntes-funciones.out" 1769283216 1283 4ecd1eb681b264f39565bee276987d20 "pdflatex"
-  "out/apuntes-funciones.tdo" 1769283216 264 f17da046bc21f4ec12567b3466db1d2a "pdflatex"
+  "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1769849114 5012 6127deb92a511e9ca94fd56d13312ba2 ""
+  "out/apuntes-funciones.aux" 1769849116 1896 bdbcc04e975f50763444f58370d7bf61 "pdflatex"
+  "out/apuntes-funciones.out" 1769849116 1663 2b1997b7fab6f9ef0ecf9bf9e0e10eab "pdflatex"
+  "out/apuntes-funciones.tdo" 1769849116 264 f17da046bc21f4ec12567b3466db1d2a "pdflatex"
   (generated)
   "out/apuntes-funciones.aux"
   "out/apuntes-funciones.log"

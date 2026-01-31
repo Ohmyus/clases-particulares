@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  24 JAN 2026 20:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  31 JAN 2026 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Users/Pablo/Documentos/clases/apuntes-mates/apuntes-funciones.tex
-(d:/Users/Pablo/Documentos/clases/apuntes-mates/apuntes-funciones.tex
+**d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex
+(d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (./apuntes.cls
@@ -924,21 +924,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `apuntes-funciones.out' has not changed.
-(rerunfilecheck)             Checksum: 4ECD1EB681B264F39565BEE276987D20;1283.
+(rerunfilecheck)             Checksum: 2B1997B7FAB6F9EF0ECF9BF9E0E10EAB;1663.
  ) 
 Here is how much of TeX's memory you used:
- 29488 strings out of 467800
- 561799 string characters out of 5436061
+ 29498 strings out of 467800
+ 561969 string characters out of 5436061
  1034216 words of memory out of 5000000
- 57564 multiletter control sequences out of 15000+600000
- 666719 words of font info for 98 fonts, out of 8000000 for 9000
+ 57570 multiletter control sequences out of 15000+600000
+ 666802 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1102b,483s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1115b,483s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on out/apuntes-funciones.pdf (2 pages, 121877 bytes).
+Output written on out/apuntes-funciones.pdf (2 pages, 125760 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 22693 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 22709 words of extra memory for PDF output out of 24883 (max. 10000000)
 

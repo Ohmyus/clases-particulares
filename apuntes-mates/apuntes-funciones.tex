@@ -37,9 +37,15 @@ Siempre que existan dos funciones $f(x)$ y $g(x)$ conocidas, se puede definir un
 
 \section{Composición de funciones}
 Otra forma de escribir funciones más complejas es tomar definiciones de funciones elementales, y utilizar como argumento de entrada otra función elemental. Por ejemplo, siendo $f(x)$ y $g(x)$ dos funciones reales tales que:
-\par \(f(x) = \ln(x)\;\;\;\;\;g(x) = x^2 - 1\)
+\par \(f(x) = \ln(x), \qquad g(x) = x^2 - 1\)
 \par Se puede definir entonces \(h(x) = (g \circ f) (x)\), que se lee como $f$ compuesto con $g$, e indica la expresión de $g(f(x))$. Entonces, esta nueva función sería:
 \[g(f(x)) = f(x)^2 - 1 = {\ln(x)}^2 - 1\]
+
+\section{Límites de una función}
+Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo. 
+\subsection{Definición formal de límite:}
+Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon$ existe otro número $\delta$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ si: $\left|l - f(a - \delta)\right| < \varepsilon$.
+\par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación la explicaremos con más detalle.
 
 \listoftodos %Este comando se encarga de generar (donde se coloque, en este caso es al final del documento) la lista recopilando todos los \todo{} que se hayan ido escribiendo. 
 \end{document}
