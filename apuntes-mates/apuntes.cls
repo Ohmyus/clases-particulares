@@ -16,13 +16,14 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern} %Fuente por defecto, otras opciones son:
 %\RequirePackage{times} %Times New Roman
-%\RequirePackage{tgpaella} %Otra fuente que me gusta mucho
+%\RequirePackage{tgpaella} %Otra fuente que me gusta mucho, no funciona en Overleaf
 \RequirePackage[protrusion=true, expansion=true, nopatch=footnote]{microtype} %mejora la lectura del documento
 
 % Matemáticas
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{array}
+\RequirePackage{mathtools}
 
 % Listas
 \RequirePackage{enumitem}
@@ -42,6 +43,7 @@
 \RequirePackage[small, hang, bf]{caption} % Poner pie a los elementos, con configuración
 \RequirePackage{subcaption} % Útil para varias imágenes
 \RequirePackage{tikz} %Rey de los paquetes de dibujo gráfico
+\RequirePackage[most]{tcolorbox}
 
 % Cambiando el idioma al español
 \RequirePackage[spanish,es-tabla]{babel}
@@ -82,7 +84,7 @@
 }
 
 % Abreviatura de `Figura' a `Fig`'
-\addto\captionsspanish{\renewcommand{\figurename}{Fig}}
+%\addto\captionsspanish{\renewcommand{\figurename}{Fig}}
 
 % Comandos útiles
 \newcommand{\htref}[2]{\href{#1}{\texttt{#2}}}
@@ -130,7 +132,91 @@
 % --------------- End of TODO Command Configuration ---------------
 
 % Configuración de TikZ
+%Librerías (funcionalidad extra)
 \usetikzlibrary{shapes, shapes.geometric, arrows.meta, shadows, positioning, calc, chains, scopes}
+%Estilos personalizados:
+\tikzset{
+    % Caja estándar
+    block/.style = {
+        rectangle,
+        draw,
+        fill=white,
+        font=\footnotesize,
+        align=center, text centered, minimum height=0.7cm
+        },
+    %Círculo estándar
+    circ/.style = {
+        circle,
+        draw,
+        fill=white,
+        font=\footnotesize,
+        align=center, text centered, minimum height=0.7cm
+        },
+    %Solo texto
+    textonly/.style = {
+        block, %Hereda todas las propiedades de block, cambio las siguientes:
+        align=left,
+        minimum height=0.5cm,
+        draw=none,  % no dibuja las líneas del borde
+        }, 
+    % Antenna (De DSNA)
+    antenna/.style = {
+        isosceles triangle,
+        draw, 
+        isosceles triangle apex angle=50,
+        shape border rotate=-90, % Points it down
+        minimum height=0.6cm,
+        node distance=2cm
+        },
+    % Polygon Arrow (The "Fat" Node Arrow)
+    polyarrow/.style = {
+        single arrow, 
+        draw=AvionicsStroke, 
+        fill=orange!20, 
+        align=center, 
+        font=\footnotesize,
+        thick,
+        minimum height=2cm
+    },
+    % Duplicado (redundado)
+    duplicated/.style = {
+        block,
+        copy shadow={
+            shadow xshift=4pt, 
+            shadow yshift=4pt,
+        }
+    },
+    % Triplicado (Redundado)
+    triplicated/.style = {
+        block,
+        double copy shadow={
+            shadow xshift=4pt, 
+            shadow yshift=4pt,
+        }
+    },
+    %Estilo de las flechas unidireccionales
+    line/.style = {
+        draw=black, 
+        -Latex, 
+        thick
+    },
+    % Flechas bidireccionales
+    reline/.style = {
+        draw=black, 
+        Latex-Latex, 
+        thick
+    },
+}
+
+%Configuración de la caja de ejemplos:
+\newtcolorbox{examplebox}{
+  colback=gray!5,
+  colframe=black,
+  boxrule=0.8pt,
+  arc=0.2mm,
+  breakable,
+  enhanced
+}
 
 % Configuración de los hipervínculos
 \hypersetup{
