@@ -16,7 +16,7 @@
 Una función es una aplicación matemática que recibe uno o varios argumentos de entrada y los relaciona con uno o varios argumentos de salida, de forma que cada argumento de entrada corresponde con un argumento de salida. Matemáticamente, al definir una función también se especifica qué conjuntos de números son el de procedencia y el de destino:
 \[\begin{array}{c} f: x \to f(x)\\
 \mathbb{R} \to \mathbb{R}\end{array}\]
-Explicando lo que quiere decir: $f$ es una función que toma un número $x$ de perteneciente a los números reales ($\mathbb{R}$) y devuelve $f(x)$, que también es un número real. Pero esta notación no es necesaria aprenderla. Generalmente se definirá una función $f(x)$ directamente con su transformación:
+Explicando lo que quiere decir: $f$ es una función que toma un número $x$ perteneciente a los números reales ($\mathbb{R}$) y devuelve $f(x)$, que también es un número real. Pero esta notación no es necesaria aprenderla. Generalmente se definirá una función $f(x)$ directamente con su transformación:
 \[f(x) = 3x^2 - 1 + \ln(x)\]
 La inmensa mayoría de las funciones elementales son funciones reales. La forma de construir funciones nuevas es incluyendo funciones elementales en la definición, o mediante composición de funciones. Es por esto, que \underline{las funciones con las que trabajaremos serán siempre funciones reales}. 
 
@@ -65,7 +65,7 @@ El dominio y el recorrido de una función son conjuntos. Como estamos trabajando
 Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluiddos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio. 
 
 \subsubsection{Dominio de funciones definidas a trozos}
-\todo{Escribir esta sección}
+Este es un caso más particular, donde lo que ocurre es que se debe comprobar el dominio de cada una de las definiciones de la función. Una vez hecho esto, si hay restricciones al dominio de alguna de las definiciones de la función definida a trozos, entonces estas solamente se aplicarán si caen dentro del intervalo donde esa definición aplica.
 
 \subsection{Recorrido de una función} %encabezado 2
 También conocido como imagen, el recorrido de una función es el conjunto de todos los posibles valores que puede tomar $f(x)$ para todas las $x$ de su dominio. Es más complicado de calcular analíticamente, por lo que suele preguntarse en ejercicios de forma gráfica.
@@ -95,7 +95,7 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
     \[D(g) = (-\infty, -1] \cup [1, \infty)\]
 
     \subsubsection*{3.}
-    En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podeos escribir:
+    En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podeos escribir:
     \[D(h) = [-1, 1]\]
 
     \subsubsection*{4.}
@@ -106,6 +106,8 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
     \[x = 2,\quad x = -2\]
     Entonces ahora tenemos los valores de $x$ donde tenemos un 0 en el denominador, y sabemos que no pertenecen al dominio. Entonces, podemos escribir
     \[D(j) = \mathbb{R} - \{-2, 2\} \]
+
+    \textbf{Nota:} Cuando una función tenga varias operaciones que no están definidas para algunos valores, su dominio deberá evitar todos estos valores, asegurando que está definida siempre.
 
     \subsubsection*{Indica el recorrido de las siguientes funciones:}
     \begin{enumerate}
@@ -144,10 +146,118 @@ Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial. 
 \par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo. 
 \subsection{Definición formal de límite:}
-Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon$ se puede encontrar otro número $\delta$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ si: $\left|l - f(a - \delta)\right| < \varepsilon$.
+Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ si: $\left|l - f(a - \delta)\right| < \varepsilon$.
 \par Todo esto se escribe así:
 \[\lim_{x\to a}f(x) = l\]
-\par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación la explicaremos con más detalle. \todo{Explicación de la definición de límite}
+\par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle. 
+\par Imaginemos una función, por ejemplo $f(x) = x^2 - 1$. Veremos cómo es el límite cuando $f(x)$ tiende a 1. Tomando la definición de límite, necesitamos asegurar que para cualquier número $\varepsilon$ arbitrariamente pequeño, podemos encontrar otro número $\delta$ que cumpla una condición.
+\par Esta condición consiste en que para cualquier $\varepsilon$ positivo pero arbitrariamente pequeño, el valor de $\left|f(1 + \delta) - f(1 - \delta)\right|$ debe ser menor que $\varepsilon$, eso sí, con un valor de $\delta$ positivo y mayor que 0. La mejor forma de entender esta restricción es fijarse en la \autoref{fig:limit-definition}:
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[width=0.65\linewidth, height=7cm,
+            xmin=0.5, xmax=2,
+            ymin=-0.5, ymax=0.5,
+            axis lines = left,
+            xlabel=$x$, ylabel=$f(x)$
+            ]
+            %\addplot[black, dashed] coordinates {(1,-0.5) (1,0)};
+            \addplot[black, dashed] coordinates {(1.05,-0.5) (1.05,0.1025)};
+            \addplot[black, dashed] coordinates {(0.95,-0.5) (0.95,-0.0975)};
+            \addplot[blue, dashed] coordinates {(0.5,0.1025) (1.05,0.1025)};
+            \addplot[blue, dashed] coordinates {(0.5,-0.0975) (0.95,-0.0975)};
+            \addplot[color=red,domain=0:1.2,samples=30]{x^2-1};
+            \addplot[{Latex-Latex}] coordinates {(0.95,-0.45) (1.05,-0.45)} node[midway, above] {$2\delta$};
+            \addplot[{Latex-Latex}] coordinates {(1.2,-0.0975) (1.2,0.1025)} node[midway, right] {$\left|f(1 + \delta) - f(1 - \delta)\right|$};
+            \addplot[{Latex-Latex}] coordinates {(0.55,-0.2) (0.55,0.2)} node[midway, right] {$\varepsilon$};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Representación gráfica de la definición de límite}
+    \label{fig:limit-definition}
+\end{figure}
+
+Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre las alturas de la función en los puntos $x = 1- \delta$ y $x = 1 + \delta$ sea menor que $\varepsilon$. Entonces, como se puede ver en el dibujo, para cualquier $\varepsilon$ podemos encontrar un $\delta$ que cumpla esta condición.
+\par Una vez que hemos definido formalmente el concepto de límite, se pasará en los ejemplos a hacer una introducción más coloquial. Es muy importante saber que el límite de una función en un punto \textbf{no} es lo mismo que el valor de la función en ese punto \todo{referencia a un ejemplo}. En muchas ocasiones coincide, pero nunca tiene por qué ser igual.
+
+\begin{examplebox}
+    \subsection*{Ejemplos gráficos de límites}
+    \subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
+    \begin{center}
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[width=0.96\linewidth,
+            height=\linewidth,
+            xmax=1, xmin=-1,
+            ymax=1, ymin=-1,
+            axis lines = center,
+            xlabel = $x$,
+            ylabel= $f(x)$
+        ]
+        \addplot[color=blue, domain=-1:1, samples=30]{0.5 - x^2};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(0.5,0.25)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[width=0.96\linewidth,
+            height=\linewidth,
+            xmax=2, xmin=0,
+            ymax=1, ymin=-1,
+            axis lines = center,
+            xlabel = $x$,
+            ylabel= $g(x)$
+        ]
+        \addplot[color=blue, domain=0:2, samples=30]{ln(x)};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(1,0)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[width=0.96\linewidth,
+            height=\linewidth,
+            xmax=3, xmin=-1,
+            ymax=10, ymin=-10,
+            axis lines = center,
+            xlabel = $x$,
+            ylabel= $f(x)$
+        ]
+        \addplot[color=blue, domain=-1:0.99, samples=30]{1/(x-1)};
+        \addplot[color=blue, domain=1.01:3, samples=30]{1/(x-1)};
+        %\addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(0.5,0.25)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[width=0.96\linewidth,
+            height=\linewidth,
+            xmax=2, xmin=0,
+            ymax=1, ymin=-1,
+            axis lines = center,
+            xlabel = $x$,
+            ylabel= $g(x)$
+        ]
+        \addplot[color=blue, domain=0:2, samples=30]{ln(x)};
+        %\addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(1,0)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \end{center}
+    \begin{tabular}{ll}
+        $\bullet$ & $\lim_{x\to\frac{1}{2}} f(x)$ \\
+        $\bullet$ & $\lim_{x \to 1} g(x)$ \\
+    \end{tabular}
+\end{examplebox}
 
 \newpage
 \listoftodos
