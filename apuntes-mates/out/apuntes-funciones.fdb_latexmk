@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770402770.75731 "/home/pablo/Documents/Personal/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1770402773.54086 0
-  "/home/pablo/Documents/Personal/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1770402770.53933 16609 ea99d6e7cbc5c9bc144eed04147e5101 ""
+["pdflatex"] 1770405411.87026 "/home/pablo/Documents/Personal/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1770405414.57941 0
+  "/home/pablo/Documents/Personal/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1770405411.62292 16627 2a9727e4eac014f67ae24728f374467b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -304,11 +304,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1760479248 5528139 daf1353d2d3d7fed9df2ebbf1b26218e ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1760479319 3628771 1902135922bca16f9853a8d51da61028 ""
   "/usr/local/texlive/2025/texmf.cnf" 1760479240.46187 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "apuntes-funciones.tex" 1770402770.53933 16609 ea99d6e7cbc5c9bc144eed04147e5101 ""
+  "apuntes-funciones.tex" 1770405411.62292 16627 2a9727e4eac014f67ae24728f374467b ""
   "apuntes.cls" 1770386679.31965 6308 8d8b1ab477edc546c86ce169a4435c93 ""
-  "out/apuntes-funciones.aux" 1770402773.35338 2797 56ce758e9a01ad2abd652624d72e031a "pdflatex"
-  "out/apuntes-funciones.out" 1770402773.35538 1942 d54565d8d4c55b0f8a59c09075047a5a "pdflatex"
-  "out/apuntes-funciones.tdo" 1770402773.35638 88 ed055459f83cc3f92d8ae84b70435916 "pdflatex"
+  "out/apuntes-funciones.aux" 1770405414.38794 2829 22a3a48099ba3bff6e4e46f4ee03318e "pdflatex"
+  "out/apuntes-funciones.out" 1770405414.38994 1942 d54565d8d4c55b0f8a59c09075047a5a "pdflatex"
+  "out/apuntes-funciones.tdo" 1770405414.38994 88 ed055459f83cc3f92d8ae84b70435916 "pdflatex"
   (generated)
   "out/apuntes-funciones.aux"
   "out/apuntes-funciones.log"
