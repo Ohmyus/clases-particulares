@@ -501,10 +501,6 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
-INPUT out/apuntes-funciones.tdo
-INPUT out/apuntes-funciones.tdo
-INPUT out/apuntes-funciones.tdo
-OUTPUT out/apuntes-funciones.tdo
 INPUT out/apuntes-funciones.aux
 INPUT out/apuntes-funciones.out
 INPUT out/apuntes-funciones.out

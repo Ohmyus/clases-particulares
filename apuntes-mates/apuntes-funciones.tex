@@ -178,14 +178,14 @@ Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualqui
 \end{figure}
 
 Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre las alturas de la función en los puntos $x = 1- \delta$ y $x = 1 + \delta$ sea menor que $\varepsilon$. Entonces, como se puede ver en el dibujo, para cualquier $\varepsilon$ podemos encontrar un $\delta$ que cumpla esta condición.
-\par Una vez que hemos definido formalmente el concepto de límite, se pasará en los ejemplos a hacer una introducción más coloquial. Es muy importante saber que el límite de una función en un punto \textbf{no} es lo mismo que el valor de la función en ese punto \todo{referencia a un ejemplo}. En muchas ocasiones coincide, pero nunca tiene por qué ser igual.
+\par Una vez que hemos definido formalmente el concepto de límite, se pasará en los ejemplos a hacer una introducción más coloquial. Es muy importante saber que el límite de una función en un punto \textbf{no} es lo mismo que el valor de la función en ese punto, como se puede observar en el ejemplo 3. En muchas ocasiones coincide, pero nunca tiene por qué ser igual.
 
 \begin{examplebox}
     \subsection*{Ejemplos gráficos de límites}
     \subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
     \begin{minipage}[b]{0.45\linewidth}
         \begin{enumerate}[label=\arabic*., series=mylist]
-            \item \(\dlim_{x\to\frac{1}{2}} f(x)\) 
+            \item \(\dlim_{x\to\frac{1}{2}} f(x)\) %\dlim es un comando nuevo de apuntes.cls que se encarga de que los límites están bien puestos
             \item \(\dlim_{x \to 0} f(x)\) 
             \item $\dlim_{x \to 0} g(x)$
             \item $\dlim_{x \to 1} h(x)$
@@ -277,9 +277,18 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
         \end{tikzpicture}
     \end{minipage}
     \end{center}
+    \subsubsection*{1, 2, 3, 5, 6, 8}
+    Estos límites existen, aunque no exista el valor de la función en el punto. Siempre podemos acercarnos tanto al valor de $x$ al que tiende el límite como haga falta para poder aproximarnos a un valor fijo en el eje $y$.
+    \subsubsection*{4, 7}
+    En el caso de $h(x)$ cuando $x \to 1$, como hay una asíntota vertical, no existe el límite. 
+    \par En el caso de $j(x)$ cuando $x \to 0$, se observa que sí existe $j(0)$, sin embargo, el límite no, ya que no podemos acercarnos al punto $x = 0$ por la izquierda y por la derecha, y reducir arbitrariamente la diferencia de alturas.
 
-    \todo{Escribir la resolución del ejercicio} Puntos de bonificación si se es capaz de reconocer las funciones representadas.
 \end{examplebox}
+
+\subsection{Límites de una función en el infinito}
+También puede resultar de mucho interés observar cómo es el comportamiento de una función $f(x)$ cuando esta toma valores de $x$ muy altos. Para ello, se toman límites en el infinito, de la siguiente forma:
+\[ l = \lim_{x \to \infty} f(x)\]
+Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$.
 
 \newpage
 \listoftodos

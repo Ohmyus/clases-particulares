@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770426117.72324 "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1770426120.13963 0
-  "apuntes-funciones.tex" 1770426117 18023 28d5740de7e2a4fd4c69e06c57dd7b8f ""
+["pdflatex"] 1770479316.32111 "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1770479319.38125 0
+  "apuntes-funciones.tex" 1770479315 19213 df26044a2e597908f8ba1ebe4a8652d0 ""
   "apuntes.cls" 1770425509 6774 c2dc4438050cb392a28d0551469033a8 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1756239324 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1756239324 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -305,14 +305,12 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756245672 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756245975 3605803 3405118f97e4dabe07936f25e8c4e59e ""
   "c:/texlive/2025/texmf.cnf" 1756240331 713 e69b156964470283e0530f5060668171 ""
-  "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1770426117 18023 28d5740de7e2a4fd4c69e06c57dd7b8f ""
-  "out/apuntes-funciones.aux" 1770426119 2962 d7a8549555abcfd9ce3dcc794683d8b6 "pdflatex"
-  "out/apuntes-funciones.out" 1770426119 1942 d54565d8d4c55b0f8a59c09075047a5a "pdflatex"
-  "out/apuntes-funciones.tdo" 1770426119 180 8372c52429b579ec13cc05302ed6f0b6 "pdflatex"
+  "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1770479315 19213 df26044a2e597908f8ba1ebe4a8652d0 ""
+  "out/apuntes-funciones.aux" 1770479319 2714 da40f03ddf388ed3b0040cc1214a71b8 "pdflatex"
+  "out/apuntes-funciones.out" 1770479319 2029 3f042870fb6ef61db262c4297223cba7 "pdflatex"
   (generated)
   "out/apuntes-funciones.aux"
   "out/apuntes-funciones.log"
   "out/apuntes-funciones.out"
   "out/apuntes-funciones.pdf"
-  "out/apuntes-funciones.tdo"
   (rewritten before read)

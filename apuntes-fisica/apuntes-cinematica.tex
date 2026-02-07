@@ -17,8 +17,94 @@ Para poder describir posiciones, velocidades, aceleraciones, y tiempos; es neces
 
 \subsection{Definición de Vector}
 Un vector es una representación de una magnitud que tiene una dirección asociada. Su uso es necesario cuando para describir alguna propiedad física de la naturaleza, no es suficiente con dar un número. Por ejemplo, si dos aviones vuelan a 900 km/h, no sabemos si se acercaon o se  alejan, sino que para ello habrá que definir \textit{hacia dónde} están volando.
-\par Matemáticamente, un vector consiste en un conjunto de números. Físicamente, utilizaremos vectores bidimensionales (de dos componentes) para movimientos planos, y vectores tridimensionales (de tres componentes) para movimientos fuera de un plano. Podemos definir un vector $\vec{u}$ de la siguiente forma:
+\subsubsection{Notación matemática de vectores}
+Matemáticamente, un vector consiste en un conjunto de números. Físicamente, utilizaremos vectores bidimensionales (de dos componentes) para movimientos planos, y vectores tridimensionales (de tres componentes) para movimientos fuera de un plano. Podemos definir un vector $\vec{u}$ de la siguiente forma:
 \[ \vec{u} = \left[\begin{array}{c} 1 \\ 2 \end{array}\right]\]
-Por comodidad de escritura, en muchas ocasiones el vector se escribirá así: $\vec{u} = [1, 2]^T$, simplemente por comodidad de escritura. El superíndice ($^T$) indica que el vector está traspuesto, es decir, que la fila se debe interpretar como una columna.
+Por comodidad de escritura, en muchas ocasiones el vector se escribirá así: $\vec{u} = [1, 2]^T$, simplemente por facilitar su escritura. El superíndice ($^T$) indica que el vector está traspuesto, es decir, que la fila se debe interpretar como una columna.
+\subsubsection{Interpretación gráfica de vectores}
+Gráficamente, los vectores se pueden interpretar como flechas con una dirección y sentido, de forma que $\vec{u}$ sería:
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[width=0.3\linewidth,
+        height=0.3\linewidth,
+        axis equal image,
+        xmin=-1.1, xmax=2.1,
+        ymin=-1.1, ymax=2.1,
+        axis lines = center,
+        xlabel = $x$,
+        ylabel= $y$,
+        thick
+    ]
+    \addplot[{-Latex}, blue, ultra thick] coordinates {(0,0) (1,2)} node[midway, left, black] {$\vec{u}$};
+    \node[below left] at (0,0) {O};
+    \end{axis}
+    \end{tikzpicture}
+\end{figure}
 
+Y es muy importante observar que al dar la definición de $\vec{u}$, se ha dado por sentado el sistema de referencia en el que se representa, que consiste en los ejes y el origen de la figura.
+
+\subsection{Propiedades de los Vectores}
+Si se entienden los vectores como objetos matemáticos, es muy imporante definir las operaciones que se pueden hacer con ellos. Principalmente, hay dos operaciones elementales que \textbf{determinan} lo que es un vector. 
+\subsubsection{Suma de vectores}
+Dados dos vectores $\vec{a}$ y $\vec{b}$, por sus componentes:
+\[\vec{a} = \left[\begin{array}{c} a_x \\ a_y \end{array}\right],\quad \vec{b} = \left[\begin{array}{c} b_x \\ b_y \end{array}\right]\]
+Se puede definir su suma de la siguiente forma:
+\[\vec{a} + \vec{b} = \left[\begin{array}{c} a_x + b_x \\ a_y + b_y \end{array}\right]\]
+Gráficamente, la suma de los vectores no es más que el vector resultante de unir el extremo de uno con el origen del otro:
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[width=0.4\linewidth,
+        height=0.4\linewidth,
+        axis equal image,
+        xmin=-2.1, xmax=2.1,
+        ymin=-1.1, ymax=2.1,
+        axis lines = center,
+        xlabel = $x$,
+        ylabel= $y$,
+        thick
+    ]
+    \addplot[{-Latex}, orange, thick] coordinates {(0,0) (1,2)} node[midway, right, black] {$\vec{a}$};
+    \addplot[{-Latex}, red, thick] coordinates {(0,0) (-2,-1)} node[midway, below, black] {$\vec{b}$};
+    \addplot[{-Latex}, red, thick] coordinates {(1,2) (-1,1)};
+    \addplot[{-Latex}, blue, thick] coordinates {(0,0) (-1,1)} node[midway, left, black] {$\vec{a} + \vec{b}$};
+    \node[below left] at (0,0) {O};
+    \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+\subsubsection{Producto de un vector por un escalar}
+Dado un vector $\vec{a}$ y un número $k \in \mathbb{R}$ (Eso quiere decir que $k$ es un número real), se puede definir el producto $k \vec{a}$:
+\[k \vec{a} = \left[\begin{array}{c} k\ a_x\\ k\ a_y\end{array}\right]\]
+
+Que gráficamente consiste en incremetar el tamaño de $\vec{a}$ por un factor de $k$:
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[width=0.5\linewidth,
+        %height=0.4\linewidth,
+        axis equal image,
+        xmin=-1.1, xmax=5.1,
+        ymin=-1.1, ymax=3.1,
+        axis lines = center,
+        xlabel = $x$,
+        ylabel= $y$,
+        thick
+    ]
+    \addplot[{-Latex}, red, thick] coordinates {(0,0) (4,2)} node[pos=1, below right, black] {$k\vec{a}$};
+    \addplot[{-Latex}, orange, thick] coordinates {(0,0) (2,1)} node[pos=1, below right, black] {$\vec{a}$};
+    \node[below left] at (0,0) {O};
+    \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+Si $k$ es menor que 1, entonces no estaremos `estirando' el vector, sino encogiéndolo.
+\par Se deja para el lector terminar los ejercicios en la \todo{sección de ejercicios} de vectores.
+
+\section{Cinemática}
+La cinemática es la parte de la física encargada del estudio y descripción del movimiento. Como se ha podido observar en la introducción, las herramientas para hacer esto son el álgebra vectorial, y el cálculo diferencial. 
+\par A este nivel, los movimientos que se estudiarán son movimientos de puntos, de forma que los móviles solamente tendrán una posición, velocidad y acelaración. Estas magnitudes son \textbf{siempre} vectoriales, pero en muchos ejemplos donde el movimiento es en una dimensión, por facilitar la escritura, se escriben directamente los módulos de los vectores como si estas fueran las magnitudes.
+\newpage
+\listoftodos
 \end{document}

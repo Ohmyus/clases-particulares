@@ -482,6 +482,11 @@ INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT out/apuntes-cinematica.tdo
+INPUT out/apuntes-cinematica.tdo
+INPUT out/apuntes-cinematica.tdo
+OUTPUT out/apuntes-cinematica.tdo
 INPUT out/apuntes-cinematica.aux
 INPUT out/apuntes-cinematica.out
 INPUT out/apuntes-cinematica.out
@@ -492,3 +497,5 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
