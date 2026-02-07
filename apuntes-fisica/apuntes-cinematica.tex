@@ -1,0 +1,24 @@
+%! TEX root apuntes-cinematica.tex
+\documentclass[ %Declaración de qué tipo de documento va a ser
+    oneside,    %Páginas pares e impares iguales, twoside para diferenciarlas
+    10pt        %Tamaño de la fuente básica. Si es pequeño poner 12pt.
+]{apuntes} %Esta es una clase de documento nueva basada en la clase básica article, que carga muchos paquetes para poder pintar tablas, cargar figuras, ajustar la disposición de la página, etc. Escrito por mí
+
+\begin{document} %A partir de aquí comienza el documento
+\begin{center}  %entre \begin y \end todo estará centrado
+    \LARGE \textbf{Apuntes de Cinemática} %Texto muy grande y en negrita
+\end{center}
+\section{Introducción al Cálculo Vectorial}
+En estos apuntes se recoge la parte de cinemática que se corresponde a la física. El objetivo es tratar todo con el rigor adecuado para sentar las bases necesarias y poder construir encima de esto. El objetivo es sentar los \textbf{conocimientos básicos} necesarios para abordar la asignatura de física.
+
+\subsection{Sistemas de Referencia}
+Para poder describir posiciones, velocidades, aceleraciones, y tiempos; es necesario que se establezcan unas bases en común. Estas consisten en los sistemas de referencia. Al nivel que se abordará, consiste simplemente en indicar la posición en 1 o 2 dimensiones del Origen, y la dirección de los ejes de coordenadas en los que se describirá el movimiento.
+\par En muchos ejercicios, directamente se describen magnitudes como la posición o la velocidad de un cuerpo, y es importante saber que se está dando también el sistema de referencia en el que están descritas.
+
+\subsection{Definición de Vector}
+Un vector es una representación de una magnitud que tiene una dirección asociada. Su uso es necesario cuando para describir alguna propiedad física de la naturaleza, no es suficiente con dar un número. Por ejemplo, si dos aviones vuelan a 900 km/h, no sabemos si se acercaon o se  alejan, sino que para ello habrá que definir \textit{hacia dónde} están volando.
+\par Matemáticamente, un vector consiste en un conjunto de números. Físicamente, utilizaremos vectores bidimensionales (de dos componentes) para movimientos planos, y vectores tridimensionales (de tres componentes) para movimientos fuera de un plano. Podemos definir un vector $\vec{u}$ de la siguiente forma:
+\[ \vec{u} = \left[\begin{array}{c} 1 \\ 2 \end{array}\right]\]
+Por comodidad de escritura, en muchas ocasiones el vector se escribirá así: $\vec{u} = [1, 2]^T$, simplemente por comodidad de escritura. El superíndice ($^T$) indica que el vector está traspuesto, es decir, que la fila se debe interpretar como una columna.
+
+\end{document}

@@ -4,9 +4,6 @@
     10pt        %Tamaño de la fuente básica. Si es pequeño poner 12pt.
 ]{apuntes} %Esta es una clase de documento nueva basada en la clase básica article, que carga muchos paquetes para poder pintar tablas, cargar figuras, ajustar la disposición de la página, etc. Escrito por mí
 
-\usepackage{pgfplots}[width=\linewidth]
-\pgfplotsset{compat=1.18}
-
 \begin{document} %A partir de aquí comienza el documento
 \begin{center}  %entre \begin y \end todo estará centrado
     \LARGE \textbf{Apuntes de Funciones} %Texto muy grande y en negrita
@@ -27,12 +24,13 @@ La inmensa mayoría de las funciones elementales son funciones reales. La forma 
         \centering
         \begin{tikzpicture}
             \begin{axis}[width=\linewidth,
-                xmin=-2, xmax=2,
-                ymin=-0.2, ymax=2,
+                xmin=-2, xmax=2.1,
+                ymin=-0.2, ymax=2.1,
                 axis lines = middle,
-                xlabel=$x$, ylabel=$f(x)$
+                xlabel=$x$, ylabel=$f(x)$,
+                thick
                 ]
-                \addplot[color=blue, domain=-2:2, samples=50]{x^2};
+                \addplot[ultra thick, color=blue, domain=-2:2, samples=50]{x^2};
             \end{axis}
         \end{tikzpicture}
     \caption{Representación de $f(x) = x^2$}
@@ -43,12 +41,13 @@ La inmensa mayoría de las funciones elementales son funciones reales. La forma 
         \centering
         \begin{tikzpicture}
             \begin{axis}[width=\linewidth,
-                xmin=-0.5, xmax=4,
+                xmin=-0.5, xmax=4.1,
                 ymin=-2.5, ymax=1.5,
                 axis lines = middle,
-                xlabel=$x$, ylabel=$f(x)$
+                xlabel=$x$, ylabel=$f(x)$,
+                thick
                 ]
-                \addplot[color=blue, domain=0:4, samples=50]{ln(x)};
+                \addplot[ultra thick, color=blue, domain=0:4, samples=50]{ln(x)};
             \end{axis}
         \end{tikzpicture}
     \caption{Representación de $f(x) = \ln(x)$}
@@ -157,17 +156,18 @@ Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualqui
     \centering
     \begin{tikzpicture}
         \begin{axis}[width=0.65\linewidth, height=7cm,
-            xmin=0.5, xmax=2,
+            xmin=0.5, xmax=1.9,
             ymin=-0.5, ymax=0.5,
             axis lines = left,
-            xlabel=$x$, ylabel=$f(x)$
+            xlabel=$x$, ylabel=$f(x)$,
+            thick
             ]
             %\addplot[black, dashed] coordinates {(1,-0.5) (1,0)};
             \addplot[black, dashed] coordinates {(1.05,-0.5) (1.05,0.1025)};
             \addplot[black, dashed] coordinates {(0.95,-0.5) (0.95,-0.0975)};
             \addplot[blue, dashed] coordinates {(0.5,0.1025) (1.05,0.1025)};
             \addplot[blue, dashed] coordinates {(0.5,-0.0975) (0.95,-0.0975)};
-            \addplot[color=red,domain=0:1.2,samples=30]{x^2-1};
+            \addplot[color=red,domain=0:1.2,samples=30,ultra thick]{x^2-1};
             \addplot[{Latex-Latex}] coordinates {(0.95,-0.45) (1.05,-0.45)} node[midway, above] {$2\delta$};
             \addplot[{Latex-Latex}] coordinates {(1.2,-0.0975) (1.2,0.1025)} node[midway, right] {$\left|f(1 + \delta) - f(1 - \delta)\right|$};
             \addplot[{Latex-Latex}] coordinates {(0.55,-0.2) (0.55,0.2)} node[midway, right] {$\varepsilon$};
@@ -183,6 +183,23 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
 \begin{examplebox}
     \subsection*{Ejemplos gráficos de límites}
     \subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
+    \begin{minipage}[b]{0.45\linewidth}
+        \begin{enumerate}[label=\arabic*., series=mylist]
+            \item \(\dlim_{x\to\frac{1}{2}} f(x)\) 
+            \item \(\dlim_{x \to 0} f(x)\) 
+            \item $\dlim_{x \to 0} g(x)$
+            \item $\dlim_{x \to 1} h(x)$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\linewidth}
+        \begin{enumerate}[resume=mylist]
+            \item \(\dlim_{x \to 2} h(x)\) 
+            \item $\dlim_{x \to 0} h(x)$
+            \item \(\dlim_{x \to 0} j(x)\) 
+            \item $ \dlim_{x \to -1} j(x)$
+        \end{enumerate}
+    \end{minipage}
+
     \begin{center}
     \begin{minipage}[b]{0.45\linewidth}
         \centering
@@ -193,10 +210,11 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
             ymax=1, ymin=-1,
             axis lines = center,
             xlabel = $x$,
-            ylabel= $f(x)$
+            ylabel= $f(x)$,
+            thick
         ]
-        \addplot[color=blue, domain=-1:1, samples=30]{0.5 - x^2};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(0.5,0.25)};
+        \addplot[color=blue, domain=-1:1, samples=30, ultra thick]{0.5 - x^2};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0.5,0.25)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -206,14 +224,15 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
         \begin{tikzpicture}
         \begin{axis}[width=0.96\linewidth,
             height=\linewidth,
-            xmax=2, xmin=0,
-            ymax=1, ymin=-1,
+            xmax=2, xmin=-2,
+            ymax=5, ymin=-0.1,
             axis lines = center,
             xlabel = $x$,
-            ylabel= $g(x)$
+            ylabel= $g(x)$,
+            thick
         ]
-        \addplot[color=blue, domain=0:2, samples=30]{ln(x)};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(1,0)};
+        \addplot[color=blue, domain=-2:2, samples=30, ultra thick]{exp(x)};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0,1)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -224,14 +243,15 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
         \begin{axis}[width=0.96\linewidth,
             height=\linewidth,
             xmax=3, xmin=-1,
-            ymax=10, ymin=-10,
+            ymax=11, ymin=-11,
             axis lines = center,
             xlabel = $x$,
-            ylabel= $f(x)$
+            ylabel= $h(x)$,
+            thick
         ]
-        \addplot[color=blue, domain=-1:0.99, samples=30]{1/(x-1)};
-        \addplot[color=blue, domain=1.01:3, samples=30]{1/(x-1)};
-        %\addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(0.5,0.25)};
+        \addplot[color=blue, domain=-1:0.99, samples=30, ultra thick]{1/(x-1)};
+        \addplot[color=blue, domain=1.01:3, samples=30, ultra thick]{1/(x-1)};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(2, 1)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -241,22 +261,24 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
         \begin{tikzpicture}
         \begin{axis}[width=0.96\linewidth,
             height=\linewidth,
-            xmax=2, xmin=0,
-            ymax=1, ymin=-1,
+            xmax=2.1, xmin=-2.1,
+            ymax=1.1, ymin=-0.6,
             axis lines = center,
             xlabel = $x$,
-            ylabel= $g(x)$
+            ylabel= $j(x)$,
+            thick
         ]
-        \addplot[color=blue, domain=0:2, samples=30]{ln(x)};
-        %\addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5] coordinates {(1,0)};
+        \addplot[color=blue, domain=-2:0, samples=60, ultra thick]{0.75+0.2*x};
+        \addplot[color=blue, domain=0:2, samples=60, ultra thick]{0.25-0.25*x};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0, 0.75)};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0, 0.25)};
+        \addplot[mark=*, mark size = 3pt, draw=blue, fill=blue, thick] coordinates {(0, 0.5)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
     \end{center}
-    \begin{tabular}{ll}
-        $\bullet$ & $\lim_{x\to\frac{1}{2}} f(x)$ \\
-        $\bullet$ & $\lim_{x \to 1} g(x)$ \\
-    \end{tabular}
+
+    \todo{Escribir la resolución del ejercicio} Puntos de bonificación si se es capaz de reconocer las funciones representadas.
 \end{examplebox}
 
 \newpage

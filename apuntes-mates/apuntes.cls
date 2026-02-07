@@ -44,6 +44,7 @@
 \RequirePackage{subcaption} % Útil para varias imágenes
 \RequirePackage{tikz} %Rey de los paquetes de dibujo gráfico
 \RequirePackage[most]{tcolorbox}
+\RequirePackage{pgfplots}[width=\linewidth]
 
 % Cambiando el idioma al español
 \RequirePackage[spanish,es-tabla]{babel}
@@ -87,8 +88,9 @@
 %\addto\captionsspanish{\renewcommand{\figurename}{Fig}}
 
 % Comandos útiles
-\newcommand{\htref}[2]{\href{#1}{\texttt{#2}}}
-\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\htref}[2]{\href{#1}{\texttt{#2}}} %href pero con el formato texttt 
+\newcommand{\blue}[1]{\textcolor{blue}{#1}} %Pinta el texto en azul
+\newcommand{\dlim}{\displaystyle\lim} %Límites que no bajan el subíndice
 
 % --------------- TODO Command Configuration ---------------
 
@@ -207,6 +209,9 @@
         thick
     },
 }
+
+%Compatibilidad de pgfplots:
+\pgfplotsset{compat=1.18}
 
 %Configuración de la caja de ejemplos:
 \newtcolorbox{examplebox}{
