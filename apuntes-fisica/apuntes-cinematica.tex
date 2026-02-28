@@ -6,7 +6,7 @@
 
 \begin{document} %A partir de aquí comienza el documento
 \begin{center}  %entre \begin y \end todo estará centrado
-    \LARGE \textbf{Apuntes de Cinemática} %Texto muy grande y en negrita
+	\LARGE \textbf{Apuntes de Cinemática} %Texto muy grande y en negrita
 \end{center}
 \section{Introducción al Cálculo Vectorial}
 En estos apuntes se recoge la parte de cinemática que se corresponde a la física. El objetivo es tratar todo con el rigor adecuado para sentar las bases necesarias y poder construir encima de esto. El objetivo es sentar los \textbf{conocimientos básicos} necesarios para abordar la asignatura de física.
@@ -24,28 +24,28 @@ Por comodidad de escritura, en muchas ocasiones el vector se escribirá así: $\
 \subsubsection{Interpretación gráfica de vectores}
 Gráficamente, los vectores se pueden interpretar como flechas con una dirección y sentido, de forma que $\vec{u}$ sería:
 \begin{figure}[h]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[width=0.3\linewidth,
-        height=0.3\linewidth,
-        axis equal image,
-        xmin=-1.1, xmax=2.1,
-        ymin=-1.1, ymax=2.1,
-        axis lines = center,
-        xlabel = $x$,
-        ylabel= $y$,
-        thick
-    ]
-    \addplot[{-Latex}, blue, ultra thick] coordinates {(0,0) (1,2)} node[midway, left, black] {$\vec{u}$};
-    \node[below left] at (0,0) {O};
-    \end{axis}
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.3\linewidth,
+				height=0.3\linewidth,
+				axis equal image,
+				xmin=-1.1, xmax=2.1,
+				ymin=-1.1, ymax=2.1,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $y$,
+				thick
+			]
+			\addplot[{-Latex}, blue, ultra thick] coordinates {(0,0) (1,2)} node[midway, left, black] {$\vec{u}$};
+			\node[below left] at (0,0) {O};
+		\end{axis}
+	\end{tikzpicture}
 \end{figure}
 
 Y es muy importante observar que al dar la definición de $\vec{u}$, se ha dado por sentado el sistema de referencia en el que se representa, que consiste en los ejes y el origen de la figura.
 
 \subsection{Propiedades de los Vectores}
-Si se entienden los vectores como objetos matemáticos, es muy imporante definir las operaciones que se pueden hacer con ellos. Principalmente, hay dos operaciones elementales que \textbf{determinan} lo que es un vector. 
+Si se entienden los vectores como objetos matemáticos, es muy imporante definir las operaciones que se pueden hacer con ellos. Principalmente, hay dos operaciones elementales que \textbf{determinan} lo que es un vector.
 \subsubsection{Suma de vectores}
 Dados dos vectores $\vec{a}$ y $\vec{b}$, por sus componentes:
 \[\vec{a} = \left[\begin{array}{c} a_x \\ a_y \end{array}\right],\quad \vec{b} = \left[\begin{array}{c} b_x \\ b_y \end{array}\right]\]
@@ -53,25 +53,25 @@ Se puede definir su suma de la siguiente forma:
 \[\vec{a} + \vec{b} = \left[\begin{array}{c} a_x + b_x \\ a_y + b_y \end{array}\right]\]
 Gráficamente, la suma de los vectores no es más que el vector resultante de unir el extremo de uno con el origen del otro:
 \begin{figure}[h]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[width=0.4\linewidth,
-        height=0.4\linewidth,
-        axis equal image,
-        xmin=-2.1, xmax=2.1,
-        ymin=-1.1, ymax=2.1,
-        axis lines = center,
-        xlabel = $x$,
-        ylabel= $y$,
-        thick
-    ]
-    \addplot[{-Latex}, orange, thick] coordinates {(0,0) (1,2)} node[midway, right, black] {$\vec{a}$};
-    \addplot[{-Latex}, red, thick] coordinates {(0,0) (-2,-1)} node[midway, below, black] {$\vec{b}$};
-    \addplot[{-Latex}, red, thick] coordinates {(1,2) (-1,1)};
-    \addplot[{-Latex}, blue, thick] coordinates {(0,0) (-1,1)} node[midway, left, black] {$\vec{a} + \vec{b}$};
-    \node[below left] at (0,0) {O};
-    \end{axis}
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.4\linewidth,
+				height=0.4\linewidth,
+				axis equal image,
+				xmin=-2.1, xmax=2.1,
+				ymin=-1.1, ymax=2.1,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $y$,
+				thick
+			]
+			\addplot[{-Latex}, orange, thick] coordinates {(0,0) (1,2)} node[midway, right, black] {$\vec{a}$};
+			\addplot[{-Latex}, red, thick] coordinates {(0,0) (-2,-1)} node[midway, below, black] {$\vec{b}$};
+			\addplot[{-Latex}, red, thick] coordinates {(1,2) (-1,1)};
+			\addplot[{-Latex}, blue, thick] coordinates {(0,0) (-1,1)} node[midway, left, black] {$\vec{a} + \vec{b}$};
+			\node[below left] at (0,0) {O};
+		\end{axis}
+	\end{tikzpicture}
 \end{figure}
 
 \subsubsection{Producto de un vector por un escalar}
@@ -80,31 +80,108 @@ Dado un vector $\vec{a}$ y un número $k \in \mathbb{R}$ (Eso quiere decir que $
 
 Que gráficamente consiste en incremetar el tamaño de $\vec{a}$ por un factor de $k$:
 \begin{figure}[h]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[width=0.5\linewidth,
-        %height=0.4\linewidth,
-        axis equal image,
-        xmin=-1.1, xmax=5.1,
-        ymin=-1.1, ymax=3.1,
-        axis lines = center,
-        xlabel = $x$,
-        ylabel= $y$,
-        thick
-    ]
-    \addplot[{-Latex}, red, thick] coordinates {(0,0) (4,2)} node[pos=1, below right, black] {$k\vec{a}$};
-    \addplot[{-Latex}, orange, thick] coordinates {(0,0) (2,1)} node[pos=1, below right, black] {$\vec{a}$};
-    \node[below left] at (0,0) {O};
-    \end{axis}
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+				%height=0.4\linewidth,
+				axis equal image,
+				xmin=-1.1, xmax=5.1,
+				ymin=-1.1, ymax=3.1,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $y$,
+				thick
+			]
+			\addplot[{-Latex}, red, thick] coordinates {(0,0) (4,2)} node[pos=1, below right, black] {$k\vec{a}$};
+			\addplot[{-Latex}, orange, thick] coordinates {(0,0) (2,1)} node[pos=1, below right, black] {$\vec{a}$};
+			\node[below left] at (0,0) {O};
+		\end{axis}
+	\end{tikzpicture}
 \end{figure}
 
 Si $k$ es menor que 1, entonces no estaremos `estirando' el vector, sino encogiéndolo.
 \par Se deja para el lector terminar los ejercicios en la \todo{sección de ejercicios} de vectores.
 
 \section{Cinemática}
-La cinemática es la parte de la física encargada del estudio y descripción del movimiento. Como se ha podido observar en la introducción, las herramientas para hacer esto son el álgebra vectorial, y el cálculo diferencial. 
-\par A este nivel, los movimientos que se estudiarán son movimientos de puntos, de forma que los móviles solamente tendrán una posición, velocidad y acelaración. Estas magnitudes son \textbf{siempre} vectoriales, pero en muchos ejemplos donde el movimiento es en una dimensión, por facilitar la escritura, se escriben directamente los módulos de los vectores como si estas fueran las magnitudes.
+La cinemática es la parte de la física encargada del estudio y descripción del movimiento. Como se ha podido observar en la introducción, las herramientas para hacer esto son el álgebra vectorial, y el cálculo diferencial.
+\par A este nivel, los movimientos que se estudiarán son movimientos de puntos, de forma que los móviles solamente tendrán una posición, velocidad y acelaración. Estas magnitudes son \textbf{siempre} vectoriales, pero en muchos ejemplos donde el movimiento es en una dimensión, por facilitar la escritura, se escriben directamente los módulos de los vectores como si estas fueran las magnitudes. Esto se merece una aclaración:
+
+\subsection{Movimientos Unidimensionales}
+En el caso de los movimientos más sencillos que estudiaremos, como el Movimiento Rectilíneo Uniforme (MRU) o el Movimiento Rectilíneo Uniformemente Acelerado (MRUA), consideraremos que el móvil se mueve solamente en una de las tres coordenadas espaciales. La coordenada en la que se desarrolla el movimiento no es importante, pero imaginemos que es la coordenada $x$. En ese caso, la posición del móvil será, para un MRU:
+\[\vec{r(t)} = \left[\begin{array}{c}
+			x_0 + v t \\
+			0         \\
+			0         \\
+		\end{array}\right]\]
+
+Esta notación para la posición es muy incómoda, arrastrando los ceros en las coordenadas $y$ y $z$, por lo que se suele dar por hecho que el movimiento es unidimensional (que solo ocurre en una coordenada) y se utiliza una notación mucho más simple, que evita arrastrar los ceros innecesarios:
+\[s(t) = s_0 + vt\]
+Donde se ha dejado de llamar $x$ a la coordenada de la posición (porque el movimiento podría estar ocurriendo en la coordenada $y$ o $z$, depende del sistema de referencia que se haya elegido), así que para simplificar todo lo posible, se elige un nombre genérico ``$s$''.
+
+Habiendo hecho esta aclaración, pasaremos a las definiciones más básicas: posición, velocidad y aceleración.
+
+\subsection{Posición, Velocidad y Aceleración}
+Para describir la posición de un cuerpo (en un sistema de referencia dado) es necesario utilizar un vector. Como se ha explicado antes, este no es más que una flecha que apunta a la posición del móvil en un instante determinado:
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[height=0.5\linewidth,
+				%height=0.4\linewidth,
+				axis equal image,
+				xmin=-1.1, xmax=8.1,
+				ymin=-1.1, ymax=5.1,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $y$,
+				thick
+			]
+			\addplot[{-Latex}, blue, thick] coordinates {(0,0) (1,2.15)} node[pos=1, above right, black] {$\vec{r}(t=0)$};
+			\addplot[{-Latex},orange, dashed, domain=0:8, samples=50]{0.04*x^3 - 0.29*x^2 + 0.1*x + 2.3} node[pos=1, below left, black] {\footnotesize Trayectoria};
+			\addplot[{-Latex}, blue, thick] coordinates {(0,0) (3,1.07)} node[pos=1, above right, black] {$\vec{r}(t=1)$};
+			\node[below left] at (0,0) {O}; %Dibujar el origen
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Ejemplo de la posición de un móvil a lo largo del tiempo}
+	\label{fig:pos-ejemplo}
+\end{figure}
+
+Si la posición del móvil es conocida, y se puede expresar matemáticamente, esta tendrá la forma siguiente:
+\[\vec{r(t)} = \left[\begin{array}{c}
+			x = f_1(t) \\
+			y = f_2(t) \\
+			z = f_3(t) \\
+		\end{array}\right]\]
+
+Donde $f_1(t), f_2(t)$ y $f_3(t)$ no son más que funciones conocidas de $t$, el tiempo. Calcular la posición del móvil en un instante determinado será tan sencillo como evaluar $f_1, f_2$ y $f_3$ en ese valor de $t$, por ejemplo, en $t = 2$s, si se quiere saber la posición en el instante 2.
+\par Para la velocidad, matemáticamente se puede escribir que:
+\[\vec{v(t)} =\frac{\vec{r(t)}}{dt} = \left[\begin{array}{c}
+			\dfrac{d f_1(t)}{dt} \\
+			\dfrac{d f_2(t)}{dt} \\
+			\dfrac{d f_3(t)}{dt} \\
+		\end{array}\right]\]
+
+Que no es más que otra forma de decir que la velocidad es la derivada de la posición respecto al tiempo. La velocidad es entonces un vector. Esto puede parecer contraintuitivo, ya que en el caso de los movimientos unidimensionales, con la misma simplificación que hicimos antes, queda\footnote{Atención a que ahora la velocidad no es un vector, sino una magnitud escalar (el módulo de la velocidad)}:
+\[v(t) = \frac{ds}{dt}\]
+Que es de nuevo una expresión mucho más sencilla, y representa solamente una `componente' de la velocidad, asumiendo que las demás son 0.
+\par La aceleración son los cambios en la velocidad con el tiempo, es decir, la derivada de la velocidad con el tiempo. De nuevo podemos calcular la aceleración a partir de la velocidad con la misma operativa de antes:
+\[\vec{a(t)} =\frac{\vec{v(t)}}{dt}\]
+
+Y con esto, tenemos definidos los conceptos más básicos de la cinemática.
+
+\subsection{Propiedades de un movimiento}
+Si un movimiento es conocido, es conveniente también tener en común una serie de definiciones para poder referirnos a \textit{cómo es el movimiento} en términos generales: si se ha recorrido mucha distancia, si la velocidad ha sido muy elevada, etc.
+
+\subsubsection{Espacio Recorrido}
+Esta propiedad hace referencia a la \textbf{distancia} que hay entre el \textbf{punto inicial} y el \textbf{punto final}. Las distancias son siempre positivas.
+\par También es importante matizar que el punto inicial se corresponde con $t = 0$, pero el punto final no tiene un valor de $t$ asignado por defecto. Dependerá de cuándo se considera terminado el movimiento, o cuándo se quiere evaluar el espacio recorrido. Matemáticamente, el espaco recorrido $S$ se calcula:
+\[S = \left|\vec{r}(t_f) - \vec{r}(t_0)\right|\quad \text{que es equivalente a:}\quad S = \sqrt{(x_f - x_0)^2 + (y_f - y_0)^2 + (z_f - z_0)^2}\]
+
+\subsubsection{Desplazamiento}
+El desplazamiento de un móvil en un movimiento hace referencia al vector que une el punto inicial con el punto final del movimiento. Este no es más que la diferencia entre el punto final y el punto inicial:
+\[\vec{d} = \vec{r}(t_f) - \vec{r}(t_0)\]
+
+Y queda como ejercicio para el lector demostrar que en el caso de movimientos unidimensionales (los que utilizan `$s$' para describir la posición), el desplazamiento no es un vector, sino una magnitud escalar que coincide con el espacio recorrido.
+
 \newpage
 \listoftodos
 \end{document}

@@ -30,7 +30,7 @@ La inmensa mayoría de las funciones elementales son funciones reales. La forma 
                 xlabel=$x$, ylabel=$f(x)$,
                 thick
                 ]
-                \addplot[ultra thick, color=blue, domain=-2:2, samples=50]{x^2};
+                \addplot[ultra thick, color=red, domain=-2:2, samples=50]{x^2};
             \end{axis}
         \end{tikzpicture}
     \caption{Representación de $f(x) = x^2$}
@@ -47,7 +47,7 @@ La inmensa mayoría de las funciones elementales son funciones reales. La forma 
                 xlabel=$x$, ylabel=$f(x)$,
                 thick
                 ]
-                \addplot[ultra thick, color=blue, domain=0:4, samples=50]{ln(x)};
+                \addplot[ultra thick, color=red, domain=0:4, samples=50]{ln(x)};
             \end{axis}
         \end{tikzpicture}
     \caption{Representación de $f(x) = \ln(x)$}
@@ -213,8 +213,8 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
             ylabel= $f(x)$,
             thick
         ]
-        \addplot[color=blue, domain=-1:1, samples=30, ultra thick]{0.5 - x^2};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0.5,0.25)};
+        \addplot[color=red, domain=-1:1, samples=30, ultra thick]{0.5 - x^2};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0.5,0.25)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -231,8 +231,8 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
             ylabel= $g(x)$,
             thick
         ]
-        \addplot[color=blue, domain=-2:2, samples=30, ultra thick]{exp(x)};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0,1)};
+        \addplot[color=red, domain=-2:2, samples=30, ultra thick]{exp(x)};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0,1)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -249,9 +249,9 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
             ylabel= $h(x)$,
             thick
         ]
-        \addplot[color=blue, domain=-1:0.99, samples=30, ultra thick]{1/(x-1)};
-        \addplot[color=blue, domain=1.01:3, samples=30, ultra thick]{1/(x-1)};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(2, 1)};
+        \addplot[color=red, domain=-1:0.99, samples=30, ultra thick]{1/(x-1)};
+        \addplot[color=red, domain=1.01:3, samples=30, ultra thick]{1/(x-1)};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(2, 1)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -268,11 +268,11 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
             ylabel= $j(x)$,
             thick
         ]
-        \addplot[color=blue, domain=-2:0, samples=60, ultra thick]{0.75+0.2*x};
-        \addplot[color=blue, domain=0:2, samples=60, ultra thick]{0.25-0.25*x};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0, 0.75)};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=gray!5, thick] coordinates {(0, 0.25)};
-        \addplot[mark=*, mark size = 3pt, draw=blue, fill=blue, thick] coordinates {(0, 0.5)};
+        \addplot[color=red, domain=-2:0, samples=60, ultra thick]{0.75+0.2*x};
+        \addplot[color=red, domain=0:2, samples=60, ultra thick]{0.25-0.25*x};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.75)};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.25)};
+        \addplot[mark=*, mark size = 3pt, draw=red, fill=red, thick] coordinates {(0, 0.5)};
         \end{axis}
         \end{tikzpicture}
     \end{minipage}
