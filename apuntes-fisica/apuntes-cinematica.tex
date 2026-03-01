@@ -182,6 +182,60 @@ El desplazamiento de un móvil en un movimiento hace referencia al vector que un
 
 Y queda como ejercicio para el lector demostrar que en el caso de movimientos unidimensionales (los que utilizan `$s$' para describir la posición), el desplazamiento no es un vector, sino una magnitud escalar que coincide con el espacio recorrido.
 
+\subsubsection{Velocidad Media}
+La velocidad media de un movimiento se define como el desplazamiento dividido entre el tiempo empleado en efectuar este movimiento:
+\[\vec{v_m} = \frac{\vec{d}}{\Delta t} = \frac{\Delta \vec{r}}{\Delta t}\]
+
+\begin{examplebox}
+	\subsection*{Ejercicios de movimientos}
+	\subsubsection*{Calcula la velocidad, la velocidad media y el espacio recorrido al cabo de 5 s de los siguiente movimientos:}
+	\begin{enumerate}[label = \alph*) ]
+		\item \(\vec{r}(t) = \left[\begin{array}{c}t - 1 \\ t^2 + 2t \\ 3t - t^2 \end{array}\right]\) m
+		\item $s(t) = 2t^2 - t$ m
+		\item $s(t) = 10 - t^3 - 2t^2 + 4t$ m
+	\end{enumerate}
+	\subsubsection*{a)}
+	Para calcular la velocidad en este caso, hay que derivar cada una de las componentes de la posición respecto a t:
+	\[ \vec{v}(t) = \left[\begin{array}{c} 1 \\ 2t + 2\\ 3 - 2t \end{array}\right] \; \text{m/s}\]
+	Para calcular la velocidad media y el espacio recorrido, es necesario calcular el desplazamiento:
+	\[\vec{d} = \vec{r}(5) - \vec{r}(0) = \left[\begin{array}{r}4 \\ 35 \\ - 10 \end{array}\right] - \left[\begin{array}{r} - 1 \\ 0 \\ 0 \end{array}\right] = \left[\begin{array}{r}5 \\ 35 \\ - 10 \end{array}\right] \; \text{m}\]
+	Ahora, dividiendo esto entre el intervalo de tiempo (5s) se calcula la velocidad media:
+	\[\vec{v}_m = \frac1{5}\left[\begin{array}{r}5 \\ 35 \\ - 10 \end{array}\right] = \left[\begin{array}{r}1 \\ 7 \\ - 2 \end{array}\right] \; \text{m/s}\]
+	Finalmente, para calcular el espacio recorrido, simplemente hay que tomar el módulo del desplazamiento:
+	\[S = |\vec{d}| = \sqrt{5^2 + 35^2 + (-10)^2} = \sqrt{2250} = 47.43\dots \; \text{m}\]
+	\subsubsection*{b)}
+	Este ejercico es más sencillo porque solo tenemos que trabajar con una de las componentes. Para la veelocidad, derivamos la posición:
+	\[v(t) = \frac{ds}{dt} = 4t -1 \; \text{m/s}\]
+	Ahora se calcula el desplazamiento:
+	\[ d = s(5) - s(0) = 45 - 0 = 45 \; \text{m}\]
+	Este desplazamiento coincide con el espacio recorrido, y la velocidad media se calcula dividiendo esta distancia entre el tiemo empleado:
+	\[v_m = \frac{\Delta s}{\Delta t} = \frac{45}{5} = 9 \; \text{m/s} \]
+	\subsubsection*{c)}
+	Y en este apartado tenemos lo mismo que en el anterior, con una expresión algo más compleja, pero la resolución es igual: empezamos por calcular la velocidad derivando la posición:
+	\[v(t) = \frac{ds}{dt} = -3t^2 - 4t + 4 \; \text{m/s}\]
+	Ahora se calcula el desplazamiento, para un tiempo final de 5 s:
+	\[d = \Delta s = s(5) - s(0) = -145 - 10 = -155 \; \text{m}\]
+	En esta ocasión, el espacio recorrido debe cambiar de signo, ya que siempre es una magnitud positiva: $S = 155$ m. Para la velocidad media, se divide este desplazamiento entre el tiempo empleado:
+	\[v_m = \frac{\Delta s}{\Delta t} = \frac{-155}{5} = -21 \; \text{m/s}\]
+\end{examplebox}
+
+\subsection{Movimientos Unidimensionales Elementales}
+A los pies de la cinemática están dos movimientos unidimensionales fundamentales. Su descripción es esencial para resolver rápidamente problemas del día a día, y además su combinación, como se verá más adelante, resulta extremadamente útil para ampliar formidablemente el abanico de problemas. Los movimientos son bastante sencillos, son el MRU (Movimiento Rectilíneo Uniforme) y el MRUA (Movimiento Rectilíneo Uniformemente Acelerado).
+
+\subsubsection{Movimiento Rectilíneo Uniforme}
+Este es el movimiento unidimensional más sencillo, distinto de estar completamente quieto. Su formulación se basa en un móvil con velocidad constante. Eso quiere decir, que este movimiento está descrito por una velocidad, y una posición inicial:
+\[s(t) = s_0 + vt\]
+Donde $s$ es la posición para un instante $t$ dado, y $v$ es la velocidad que el móvil sigue en todo momento. La dificultad de estos problemas suele radicar en saber colocar bien el sistema de referencia, y entender cómo se interpretan las condiciones del enunciado. En la sección de ejemplos veremos cómo hacer todo esto.
+
+\subsubsection{Movimiento Rectilíneo Uniformemente Acelerado}
+Este movimiento ya tiene algo más de dificultad, aunque sigue siendo bastante elemental. Puede describirse con dos ecuaciones:
+\[s(t) = s_0 + v_0 t + \frac1{2}a t^2\]
+\[v(t) = v_0 + a t\]
+Donde $s$ y $v$ son la posición y la velocidad del móvil para cada instante $t$, y $s_0$ y $v_0$ son la posición y velocidad inicial del móvil, es decir, la posición y la velocidad cuando $t  = 0$. $a$ es la aceleración del movimiento, que es constante.
+\par Si se despeja la variable $t$ de la ecuación de la velocidad, y se introduce esa relación en la ecuación de la distancia, queda otra ecuación, que se puede considerar la tercera ecuación del MRUA:
+\[2a(s_f - s_0) = {v_f}^2 - {v_0}^2\]
+Sin embargo, es importante recordar que esta tercera ecuación es una combinación de las dos anteriores, entonces para poder resolver completamente un problema, son necesarias siempre dos (cualquier combinación).
+
 \newpage
 \listoftodos
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  28 FEB 2026 11:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  28 FEB 2026 16:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,13 +1146,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [4]
 
-[5] (out/apuntes-cinematica.tdo)
+[5]
+
+[6] (out/apuntes-cinematica.tdo)
 \tf@tdo=\write5
 \openout5 = `apuntes-cinematica.tdo'.
 
 
 
-[6] (out/apuntes-cinematica.aux
+[7] (out/apuntes-cinematica.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -1161,21 +1163,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `apuntes-cinematica.out' has not changed.
-(rerunfilecheck)             Checksum: 357B2D675C38CDEBFDD5AE42339A1DFD;2885.
+(rerunfilecheck)             Checksum: A2ADB16A78C5C196FCDE2F6FF114D990;3828.
  ) 
 Here is how much of TeX's memory you used:
- 64630 strings out of 467800
- 1622363 string characters out of 5436061
- 2497106 words of memory out of 5000000
- 92321 multiletter control sequences out of 15000+600000
- 699477 words of font info for 144 fonts, out of 8000000 for 9000
+ 64692 strings out of 467800
+ 1623515 string characters out of 5436061
+ 2497109 words of memory out of 5000000
+ 92366 multiletter control sequences out of 15000+600000
+ 699654 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,12n,110p,1056b,2350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on out/apuntes-cinematica.pdf (6 pages, 263284 bytes).
+Output written on out/apuntes-cinematica.pdf (7 pages, 273852 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 41237 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 41269 words of extra memory for PDF output out of 42996 (max. 10000000)
 

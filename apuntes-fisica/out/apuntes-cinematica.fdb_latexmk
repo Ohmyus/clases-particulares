@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1772275117.62072 "apuntes-cinematica.tex" "out/apuntes-cinematica.pdf" "apuntes-cinematica" 1772275119.86187 0
-  "apuntes-cinematica.tex" 1772275116 12597 77a8bcc2a411ad65fc4b372af66ebb72 ""
+["pdflatex"] 1772293373.94663 "apuntes-cinematica.tex" "out/apuntes-cinematica.pdf" "apuntes-cinematica" 1772293376.30113 0
+  "apuntes-cinematica.tex" 1772293372 17604 7e32c895be25b290f3d3af2eeb4c675c ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1756239324 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1756239324 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1756239324 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -319,9 +319,9 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756245975 3605803 3405118f97e4dabe07936f25e8c4e59e ""
   "c:/texlive/2025/texmf.cnf" 1756240331 713 e69b156964470283e0530f5060668171 ""
   "c:/texlive/texmf-local/tex/latex/apuntes/apuntes.cls" 1772189181 7181 b439659c3ad30ffe592462a566514aa4 ""
-  "out/apuntes-cinematica.aux" 1772275119 2873 ceaf5ebbc351606242ae06056c05c065 "pdflatex"
-  "out/apuntes-cinematica.out" 1772275119 2885 357b2d675c38cdebfdd5ae42339a1dfd "pdflatex"
-  "out/apuntes-cinematica.tdo" 1772275119 86 26de86f4c3751e2fc25c57d105824be4 "pdflatex"
+  "out/apuntes-cinematica.aux" 1772293376 3464 54bcfb8bfa8b7723675b1891ac64cf32 "pdflatex"
+  "out/apuntes-cinematica.out" 1772293376 3828 a2adb16a78c5c196fcde2f6ff114d990 "pdflatex"
+  "out/apuntes-cinematica.tdo" 1772293376 86 26de86f4c3751e2fc25c57d105824be4 "pdflatex"
   (generated)
   "out/apuntes-cinematica.aux"
   "out/apuntes-cinematica.log"
