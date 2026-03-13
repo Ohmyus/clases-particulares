@@ -42,7 +42,7 @@ Gráficamente, los vectores se pueden interpretar como flechas con una direcció
 	\end{tikzpicture}
 \end{figure}
 
-Y es muy importante observar que al dar la definición de $\vec{u}$, se ha dado por sentado el sistema de referencia en el que se representa, que consiste en los ejes y el origen de la figura.
+Y es muy importante observar que al dar la definición de $\vec{u}$, se ha dado por sentado el sistema de referencia en el que se representa, que consiste en los ejes y el origen de la figura, de forma que la flecha llega desde el punto (0,0) hasta el punto $\vec{u} = (1,2)$.
 
 \subsection{Propiedades de los Vectores}
 Si se entienden los vectores como objetos matemáticos, es muy imporante definir las operaciones que se pueden hacer con ellos. Principalmente, hay dos operaciones elementales que \textbf{determinan} lo que es un vector.
@@ -226,6 +226,7 @@ A los pies de la cinemática están dos movimientos unidimensionales fundamental
 Este es el movimiento unidimensional más sencillo, distinto de estar completamente quieto. Su formulación se basa en un móvil con velocidad constante. Eso quiere decir, que este movimiento está descrito por una velocidad, y una posición inicial:
 \[s(t) = s_0 + vt\]
 Donde $s$ es la posición para un instante $t$ dado, y $v$ es la velocidad que el móvil sigue en todo momento. La dificultad de estos problemas suele radicar en saber colocar bien el sistema de referencia, y entender cómo se interpretan las condiciones del enunciado. En la sección de ejemplos veremos cómo hacer todo esto.
+\par Para diferenciar un movimiento de otro, los parámetros que deberemos conocoer son: $s_0$ y $v$.
 
 \subsubsection{Movimiento Rectilíneo Uniformemente Acelerado}
 Este movimiento ya tiene algo más de dificultad, aunque sigue siendo bastante elemental. Puede describirse con dos ecuaciones:
@@ -235,7 +236,35 @@ Donde $s$ y $v$ son la posición y la velocidad del móvil para cada instante $t
 \par Si se despeja la variable $t$ de la ecuación de la velocidad, y se introduce esa relación en la ecuación de la distancia, queda otra ecuación, que se puede considerar la tercera ecuación del MRUA:
 \[2a(s_f - s_0) = {v_f}^2 - {v_0}^2\]
 Sin embargo, es importante recordar que esta tercera ecuación es una combinación de las dos anteriores, entonces para poder resolver completamente un problema, son necesarias siempre dos (cualquier combinación).
+\par Para diferenciar un movimiento de otro, los parámetros que deberemos conocoer son: $s_0$, $v_0$ y $a$.
 
+\begin{examplebox}
+	\subsection*{Ejercicios ejemplo de MRU}
+	\begin{enumerate}[label = \alph*) ]
+		\item Dos coches comienzan a moverse en direcciones opuestas a velocidad constante. Si la velocidad del coche A son 40 km/h y la del coche B son 60 km/h, calcula la separación inicial entre ambos para que el punto de encuentro esté a 10 km del lugar del que parte A.
+		\item Dos choches se mueven en la misma dirección, el coche A a 100 km/h y el coche B a 120 km/h. Calcula la ventaja que el coche A debe llevar en el instante de salida para que el el adelantamiento ocurra en 1 h desde el instante inicial.
+	\end{enumerate}
+	
+	\subsubsection*{a)}
+	En este tipo de ejercicios, lo más importante es pintar correctamente la situación y colocar bien el sistema de referencia. Comenzaremos por colocar el coche A en el origen, moviéndose en el sentido positivo. Entonces, el coche B comenzará en una posición $s_{0B}$ (la incógnita del problema) y se moverá con una velocidad negativa.
+
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+			height=0.2\linewidth,
+			xmin=-1.1, xmax=8.1,
+			ymin=-0.5, ymax=1.1,
+			axis lines = center,
+			yticklabels=\empty,
+			xlabel = $s$,
+			xtick={0.1, 6},
+			xticklabels={$s_{0A}$, $s_{0B}$},
+			thick
+		]
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+\end{examplebox}
 \newpage
 \listoftodos
 \end{document}
