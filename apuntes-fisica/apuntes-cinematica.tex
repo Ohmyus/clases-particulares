@@ -277,7 +277,7 @@ Sin embargo, es importante recordar que esta tercera ecuación es una combinaci�
 	De donde podemos despejar el tiempo (en horas):
 	\[ t = \frac{10}{v_A} = \frac1{4}\;\text{h}\]
 	Y finalmente, en la ecuación de B podemos aplicar que en $ t = \frac{1}{4},\; s = 10$, para poder despejar la incógnita que nos queda, $s_{0B}$.
-	\[ 10 = s_{0B} - \frac1{4} v_B \to s_{0B} = 10 + \frac{1}{4}v_B = 10 + \frac3{2} = 11.5\;\text{km}\]
+	\[ 10 = s_{0B} - \frac1{4} v_B \to s_{0B} = 10 + \frac{1}{4}v_B = 10 + \frac{60}{4} = 25\;\text{km}\]
 
 
 	\subsubsection*{b)}
@@ -313,10 +313,28 @@ Sin embargo, es importante recordar que esta tercera ecuación es una combinaci�
 
 	\subsection*{Ejercicios ejemplo de MRUA}
 	\begin{enumerate}[label = \alph*) ]
-		\item Calcula el tiempo que tardará un cohete en alcanzar la velocidad del sonido, si acelera verticalmente con $a = 5 \text{m/s}^2$. Calcula el espacio recorrido para este tiempo.
+		\item Calcula el tiempo que tardará un cohete en alcanzar la velocidad del sonido, si acelera verticalmente con $a = 5 \text{m/s}^2$. Calcula el espacio recorrido para este tiempo. [Nota: $a = 340$ m/s]
 		\item Asumiendo que un conductor tarda 2 s en darse cuenta de que hay un obstáculo en la vía, calcula la distancia de seguridad necesaria para parar completamente desde una velocidad de 120 km/h si la frenada máxima del vehículo es de 10 m/s.
 		\item En el instante inicial, un coche cruza la salida viajando a una velocidad constante de 80 km/h. Del mismo punto, parte otro coche desde el reposo con una aceleración de 2 m/s$^2$. Calcula el instante en el que el segundo coche alcanza al primero. ¿Con qué velocidad le alcanza?
 	\end{enumerate}
+
+	\subsubsection*{a)}
+	Para calcular una velocidad en un instante determinado, simplemente hay que aplicar las ecuación de la velocidad del MRUA:
+	\[v = v_0 + a t \to 340 = a t \to t = \frac{340}{5} = 68 \; \text{s}\]
+	Y para calcular el espacio recorrido, se puede evaluar la ecuación de la posición en $t = 68$ s.
+	\[s = s_0 + v_0 t + \frac1{2}a t^2 \to s = \frac1{2}\times5\times68^2 = 11560 \;\text{m}\]
+
+	\subsubsection*{b)}
+	En este ejercicio debemos considerar que la distancia de seguridad está compuesta por dos distancias distintas: la distancia de reacción (el espacio recorrido en los 2 s que se tarda en comenzar a frenar) y la distancia de frenado.
+	\par Para la distancia de ``reacción'', se considerar un MRU con $s_0 = 0$
+	\[s = s_0 + v t \to s = 120 \frac{\text{km}}{\text{h}}\times\frac{1000\;\text{m}}{1\;\text{km}}\times \frac{1\;\text{h}}{{3600\;\text{s}}} \times 2 \;\text{s} = 66.66\dots \; \text{m}\]
+	Para calcular la distancia de frenado, es necesario obtener el tiempo empleado en frenar. Para ello, se puede despejar de la ecuación de la velocidad del MRUA:
+	\[v = v_0 + at \to 0 = 120\frac{\text{km}}{\text{h}}\times\frac{1000\;\text{m}}{1\;\text{km}}\times \frac{1\;\text{h}}{{3600\;\text{s}}}- 10t \to t = 3.33\dots \; \text{s}\]
+	Ahora con el tiempo empleado en la frenada, se puede calcular la distancia de frenada, con la ecuación de la posición del MRUA:
+	\[ s = s_0 + v_0 t + \frac1{2} a t^2 \to s = 33.333\times3.333 - \frac{10}{2}3.33^2 \to s = 55.55\dots \; \text{m} \]
+	La distancia de seguridad deberá ser entonces la suma de las dos distancias consideradas:
+	\[d = 66.666 + 55.555 = 122.22\dots \; \text{m}\]
+
 	\subsubsection*{Comentarios}
 	Es importante darse cuenta de que estos ejercicios no son complicados matemáticamente, sino que la dificultad radica en sabe plantear bien las  ecuaciones, entender qué quiere decir que dos móviles se encuentren, y poder pensar una buena estrategia para despejar las incógnitas de las ecuaciones.
 \end{examplebox}
