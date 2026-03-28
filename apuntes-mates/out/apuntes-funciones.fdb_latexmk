@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770480539.71352 "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1770480542.09788 0
-  "apuntes-funciones.tex" 1770480538 19198 726c0493f63ea7f3b14c4ff2a3b2d786 ""
+["pdflatex"] 1774562602.99816 "apuntes-funciones.tex" "out/apuntes-funciones.pdf" "apuntes-funciones" 1774562606.16628 0
+  "apuntes-funciones.tex" 1774562602 18470 47f2e82255c783bf9ac4990f0d68bd3f ""
   "apuntes.cls" 1770425509 6774 c2dc4438050cb392a28d0551469033a8 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1756239324 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1756239324 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -305,9 +305,8 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756245672 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756245975 3605803 3405118f97e4dabe07936f25e8c4e59e ""
   "c:/texlive/2025/texmf.cnf" 1756240331 713 e69b156964470283e0530f5060668171 ""
-  "d:/Users/Pablo/Documentos/clases-particulares/apuntes-mates/apuntes-funciones.tex" 1770480538 19198 726c0493f63ea7f3b14c4ff2a3b2d786 ""
-  "out/apuntes-funciones.aux" 1770480541 2714 da40f03ddf388ed3b0040cc1214a71b8 "pdflatex"
-  "out/apuntes-funciones.out" 1770480541 2029 3f042870fb6ef61db262c4297223cba7 "pdflatex"
+  "out/apuntes-funciones.aux" 1774562605 2714 da40f03ddf388ed3b0040cc1214a71b8 "pdflatex"
+  "out/apuntes-funciones.out" 1774562605 2029 3f042870fb6ef61db262c4297223cba7 "pdflatex"
   (generated)
   "out/apuntes-funciones.aux"
   "out/apuntes-funciones.log"
