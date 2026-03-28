@@ -6,62 +6,62 @@
 
 \begin{document} %A partir de aquí comienza el documento
 \begin{center}  %entre \begin y \end todo estará centrado
-    \LARGE \textbf{Apuntes de Funciones} %Texto muy grande y en negrita
+	\LARGE \textbf{Apuntes de Funciones} %Texto muy grande y en negrita
 \end{center}
 
 \section{Definición de función} %encabezado 1
 Una función es una aplicación matemática que recibe uno o varios argumentos de entrada y los relaciona con uno o varios argumentos de salida, de forma que cada argumento de entrada corresponde con un argumento de salida. Matemáticamente, al definir una función también se especifica qué conjuntos de números son el de procedencia y el de destino:
-\[\begin{array}{c} f: x \to f(x)\\
-\mathbb{R} \to \mathbb{R}\end{array}\]
+\[\begin{array}{c} f: x \to f(x) \\
+		\mathbb{R} \to \mathbb{R}\end{array}\]
 Explicando lo que quiere decir: $f$ es una función que toma un número $x$ perteneciente a los números reales ($\mathbb{R}$) y devuelve $f(x)$, que también es un número real. Pero esta notación no es necesaria aprenderla. Generalmente se definirá una función $f(x)$ directamente con su transformación:
 \[f(x) = 3x^2 - 1 + \ln(x)\]
-La inmensa mayoría de las funciones elementales son funciones reales. La forma de construir funciones nuevas es incluyendo funciones elementales en la definición, o mediante composición de funciones. Es por esto, que \underline{las funciones con las que trabajaremos serán siempre funciones reales}. 
+La inmensa mayoría de las funciones elementales son funciones reales. La forma de construir funciones nuevas es incluyendo funciones elementales en la definición, o mediante composición de funciones. Es por esto, que \underline{las funciones con las que trabajaremos serán siempre funciones reales}.
 
 \vspace{5mm}
 \begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[width=\linewidth,
-                xmin=-2, xmax=2.1,
-                ymin=-0.2, ymax=2.1,
-                axis lines = middle,
-                xlabel=$x$, ylabel=$f(x)$,
-                thick
-                ]
-                \addplot[ultra thick, color=red, domain=-2:2, samples=50]{x^2};
-            \end{axis}
-        \end{tikzpicture}
-    \caption{Representación de $f(x) = x^2$}
-    \label{fig:x^2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[width=\linewidth,
-                xmin=-0.5, xmax=4.1,
-                ymin=-2.5, ymax=1.5,
-                axis lines = middle,
-                xlabel=$x$, ylabel=$f(x)$,
-                thick
-                ]
-                \addplot[ultra thick, color=red, domain=0:4, samples=50]{ln(x)};
-            \end{axis}
-        \end{tikzpicture}
-    \caption{Representación de $f(x) = \ln(x)$}
-    \label{fig:x}
-    \end{subfigure}
-    \caption{Representaciones de algunas funciones}
-    \label{fig:function-examples}
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[width=\linewidth,
+					xmin=-2, xmax=2.1,
+					ymin=-0.2, ymax=2.1,
+					axis lines = middle,
+					xlabel=$x$, ylabel=$f(x)$,
+					thick
+				]
+				\addplot[ultra thick, color=red, domain=-2:2, samples=50]{x^2};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Representación de $f(x) = x^2$}
+		\label{fig:x^2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[width=\linewidth,
+					xmin=-0.5, xmax=4.1,
+					ymin=-2.5, ymax=1.5,
+					axis lines = middle,
+					xlabel=$x$, ylabel=$f(x)$,
+					thick
+				]
+				\addplot[ultra thick, color=red, domain=0:4, samples=50]{ln(x)};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Representación de $f(x) = \ln(x)$}
+		\label{fig:x}
+	\end{subfigure}
+	\caption{Representaciones de algunas funciones}
+	\label{fig:function-examples}
 \end{figure}
 
 \section{Dominio y Recorrido de una función} %encabezado 1
 \label{sec:dominio-recorrido}
 El dominio y el recorrido de una función son conjuntos. Como estamos trabajando con \textbf{funciones reales}, serán conjuntos de números reales.
 \subsection{Dominio de una función}
-Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluiddos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio. 
+Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluiddos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio.
 
 \subsubsection{Dominio de funciones definidas a trozos}
 Este es un caso más particular, donde lo que ocurre es que se debe comprobar el dominio de cada una de las definiciones de la función. Una vez hecho esto, si hay restricciones al dominio de alguna de las definiciones de la función definida a trozos, entonces estas solamente se aplicarán si caen dentro del intervalo donde esa definición aplica.
@@ -70,68 +70,68 @@ Este es un caso más particular, donde lo que ocurre es que se debe comprobar el
 También conocido como imagen, el recorrido de una función es el conjunto de todos los posibles valores que puede tomar $f(x)$ para todas las $x$ de su dominio. Es más complicado de calcular analíticamente, por lo que suele preguntarse en ejercicios de forma gráfica.
 
 \begin{examplebox}
-    \subsection*{Ejemplos de cálculo de Dominio y Recorrido}
-    \subsubsection*{Calcula el dominio de las siguientes funciones:}
-    \begin{enumerate}
-        \item $f(x) = \ln(x)$
-        \item $g(x) = \sqrt{x^2 - 1}$
-        \item $h(x) = \arcsen(x)$
-        \item $j(x) = \dfrac{x - 3}{x^2 - 4}$
-        \item $k(x) = \dfrac{\ln(x + 3)}{x^2 + x - 2}$ Ejercicio para el lector. $D(k) = (-3, \infty] - \{-2, 1\}$
-    \end{enumerate}
-    De forma general, el dominio de una función $f$, lo escribiremos como $D(f)$. La solución a esto \textbf{siempre será un conjunto de valores}, que podemos escribir como un intervalo (eso de utilizar corchetes y paréntesis $\to$ [-1, 3) ), o una unión de intervalos, o un conjunto excluyendo algunos valores. La forma de determinar qué conjunto es el dominio, es \textit{buscar cuándo no se puede calcular la función}. En el caso de divisiones, cuándo se divide por 0, o en el caso de raíces cuadradas, cuándo el radicando (lo que hay dentro de la raíz) es negativo. 
-    \subsubsection*{1.}
-    En este caso, $f(x) = \ln(x)$. Recordando un poco la definición del logaritmo neperiano, sabremos que no está definido para números negativos o 0, es decir, que lo que haya dentro del logaritmo tiene que ser siempre positivo. Con esto, podemos escribir una inecuación:
-    \[ x > 0\]
-    Esto nos quiere decir que para que exista $f(x)$, es necesario que $x > 0$. Esta es la condición para el dominio. Entonces, podemos escribir:
-    \[D(f) = (0, \infty) \]
+	\subsection*{Ejemplos de cálculo de Dominio y Recorrido}
+	\subsubsection*{Calcula el dominio de las siguientes funciones:}
+	\begin{enumerate}
+		\item $f(x) = \ln(x)$
+		\item $g(x) = \sqrt{x^2 - 1}$
+		\item $h(x) = \arcsen(x)$
+		\item $j(x) = \dfrac{x - 3}{x^2 - 4}$
+		\item $k(x) = \dfrac{\ln(x + 3)}{x^2 + x - 2}$ Ejercicio para el lector. $D(k) = (-3, \infty] - \{-2, 1\}$
+	\end{enumerate}
+	De forma general, el dominio de una función $f$, lo escribiremos como $D(f)$. La solución a esto \textbf{siempre será un conjunto de valores}, que podemos escribir como un intervalo (eso de utilizar corchetes y paréntesis $\to$ [-1, 3) ), o una unión de intervalos, o un conjunto excluyendo algunos valores. La forma de determinar qué conjunto es el dominio, es \textit{buscar cuándo no se puede calcular la función}. En el caso de divisiones, cuándo se divide por 0, o en el caso de raíces cuadradas, cuándo el radicando (lo que hay dentro de la raíz) es negativo.
+			\subsubsection*{1.}
+			En este caso, $f(x) = \ln(x)$. Recordando un poco la definición del logaritmo neperiano, sabremos que no está definido para números negativos o 0, es decir, que lo que haya dentro del logaritmo tiene que ser siempre positivo. Con esto, podemos escribir una inecuación:
+			\[ x > 0\]
+			Esto nos quiere decir que para que exista $f(x)$, es necesario que $x > 0$. Esta es la condición para el dominio. Entonces, podemos escribir:
+			\[D(f) = (0, \infty) \]
 
-    \subsubsection*{2.}
-    Ahora tenemos que $g(x) = \sqrt{x^2 - 1}$ Como se ha mencionado antes, todo lo que haya dentro de una raíz debe ser mayor o igual que 0. Entonces, para encontrar el dominio, deberemos imponer esta condición, y operando ligeramente:
-    \[ x^2 - 1 \geq 0\]
-    \[(x + 1)(x - 1)\geq 0\]
-    A partir de aquí, para que el producto de ambos factores sea positivo, o bien ambos son positivos \textbf{a la vez} o ambos son negativos \textbf{a la vez}. Esto nos permite dividir la recta real\footnote{Este ejercicio se deja para el lector} en dos tramos válidos para valores de $x$: $(-\infty, -1]$, y $[1, \infty)$, es decir, que $g(x)$ existirá si $x \in (-\infty, -1] \cup [1, \infty)$. Es por esto precisamente que podemos escribir:
-    \[D(g) = (-\infty, -1] \cup [1, \infty)\]
+			\subsubsection*{2.}
+			Ahora tenemos que $g(x) = \sqrt{x^2 - 1}$ Como se ha mencionado antes, todo lo que haya dentro de una raíz debe ser mayor o igual que 0. Entonces, para encontrar el dominio, deberemos imponer esta condición, y operando ligeramente:
+			\[ x^2 - 1 \geq 0\]
+			\[(x + 1)(x - 1)\geq 0\]
+			A partir de aquí, para que el producto de ambos factores sea positivo, o bien ambos son positivos \textbf{a la vez} o ambos son negativos \textbf{a la vez}. Esto nos permite dividir la recta real\footnote{Este ejercicio se deja para el lector} en dos tramos válidos para valores de $x$: $(-\infty, -1]$, y $[1, \infty)$, es decir, que $g(x)$ existirá si $x \in (-\infty, -1] \cup [1, \infty)$. Es por esto precisamente que podemos escribir:
+			\[D(g) = (-\infty, -1] \cup [1, \infty)\]
 
-    \subsubsection*{3.}
-    En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podeos escribir:
-    \[D(h) = [-1, 1]\]
+	\subsubsection*{3.}
+	En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podeos escribir:
+	\[D(h) = [-1, 1]\]
 
-    \subsubsection*{4.}
-    En este caso, $j(x) =\frac{x - 3}{x^2 - 4}$. Debería resultar evidente que no se puede dividir entre 0, por lo que el dominio de $j(x)$ será todos los posibles valores de $x \in (-\infty, \infty)$ quitando aquellos que hagan que $x^2 - 4 = 0$. Resolviendo esta ecuación:
-    \[x^2 - 4 = 0\]
-    \[x^2 = 4\]
-    \[x = \pm \sqrt{4}\]
-    \[x = 2,\quad x = -2\]
-    Entonces ahora tenemos los valores de $x$ donde tenemos un 0 en el denominador, y sabemos que no pertenecen al dominio. Entonces, podemos escribir
-    \[D(j) = \mathbb{R} - \{-2, 2\} \]
+	\subsubsection*{4.}
+	En este caso, $j(x) =\frac{x - 3}{x^2 - 4}$. Debería resultar evidente que no se puede dividir entre 0, por lo que el dominio de $j(x)$ será todos los posibles valores de $x \in (-\infty, \infty)$ quitando aquellos que hagan que $x^2 - 4 = 0$. Resolviendo esta ecuación:
+	\[x^2 - 4 = 0\]
+	\[x^2 = 4\]
+	\[x = \pm \sqrt{4}\]
+	\[x = 2,\quad x = -2\]
+	Entonces ahora tenemos los valores de $x$ donde tenemos un 0 en el denominador, y sabemos que no pertenecen al dominio. Entonces, podemos escribir
+	\[D(j) = \mathbb{R} - \{-2, 2\} \]
 
-    \textbf{Nota:} Cuando una función tenga varias operaciones que no están definidas para algunos valores, su dominio deberá evitar todos estos valores, asegurando que está definida siempre.
+	\textbf{Nota:} Cuando una función tenga varias operaciones que no están definidas para algunos valores, su dominio deberá evitar todos estos valores, asegurando que está definida siempre.
 
-    \subsubsection*{Indica el recorrido de las siguientes funciones:}
-    \begin{enumerate}
-        \item $f(x) = x^2 + 1$
-        \item $\sqrt{x}$
-    \end{enumerate}
-    Ahora, se pide otro conjunto de valores. Esta vez, no se trata de todos los posibles valores que puede tomar $x$ para que las funciones estén definidas, sino todos los valores que pueden tomar las funciones $f$ y $g$, para cualquier valor de $x$ que esté en su dominio. El recorrido de una función $f(x)$ lo escribiremos como $R(f)$.
-    
-    \subsubsection*{1.}
-    Para el caso de $f(x) = x^2 + 1$, sabemos que todos los posibles valores de $x^2$ son positivos o 0. Entonces, al sumar 1, todos los valores de $f(x)$ serán o 1 ($x = 0$) o mayores que 1 ($x \neq 0$), así que finalmente:
-    \[ R(f) = [1, \infty] \]
+	\subsubsection*{Indica el recorrido de las siguientes funciones:}
+	\begin{enumerate}
+		\item $f(x) = x^2 + 1$
+		\item $\sqrt{x}$
+	\end{enumerate}
+	Ahora, se pide otro conjunto de valores. Esta vez, no se trata de todos los posibles valores que puede tomar $x$ para que las funciones estén definidas, sino todos los valores que pueden tomar las funciones $f$ y $g$, para cualquier valor de $x$ que esté en su dominio. El recorrido de una función $f(x)$ lo escribiremos como $R(f)$.
 
-    \subsubsection*{2.}
-    Para el caso de $g(x) = \sqrt{x}$, sabemos que serán siempre valores positivos. Conviene recordar que el operador $\sqrt{a}$ no es lo mismo que las soluciones de $x^2 = a$. Entonces, como todo lo que sale de $\sqrt{}$ es positivo:
-    \[ R(g) = [0, \infty] \]
+	\subsubsection*{1.}
+	Para el caso de $f(x) = x^2 + 1$, sabemos que todos los posibles valores de $x^2$ son positivos o 0. Entonces, al sumar 1, todos los valores de $f(x)$ serán o 1 ($x = 0$) o mayores que 1 ($x \neq 0$), así que finalmente:
+	\[ R(f) = [1, \infty] \]
+
+	\subsubsection*{2.}
+	Para el caso de $g(x) = \sqrt{x}$, sabemos que serán siempre valores positivos. Conviene recordar que el operador $\sqrt{a}$ no es lo mismo que las soluciones de $x^2 = a$. Entonces, como todo lo que sale de $\sqrt{}$ es positivo:
+	\[ R(g) = [0, \infty] \]
 \end{examplebox}
 
 \section{Operaciones con funciones} %encabezado 1
 Siempre que existan dos funciones $f(x)$ y $g(x)$ conocidas, se puede definir una nueva función $h(x)$ a partir de las anteriores, utilizando cualquiera de las operaciones elementales:
 \renewcommand{\arraystretch}{1.5}
 \[
-\begin{array}{clcl}
-\bullet & h(x) = f(x) + g(x) & \bullet & h(x) = f(x) - g(x) \\
-\bullet & h(x) = f(x) \cdot g(x) & \bullet & h(x) = \frac{f(x)}{g(x)}\quad\text{Siempre que}\; g(x) \neq 0\\
-\end{array}
+	\begin{array}{clcl}
+		\bullet & h(x) = f(x) + g(x)     & \bullet & h(x) = f(x) - g(x)                                            \\
+		\bullet & h(x) = f(x) \cdot g(x) & \bullet & h(x) = \frac{f(x)}{g(x)}\quad\text{Siempre que}\; g(x) \neq 0 \\
+	\end{array}
 \]
 
 \section{Composición de funciones}
@@ -139,156 +139,159 @@ Otra forma de escribir funciones más complejas es tomar definiciones de funcion
 \par \(f(x) = \ln(x)\;\;\;\;\;g(x) = x^2 - 1\)
 \par Se puede definir entonces \(h(x) = (g \circ f) (x)\), que se lee como $f$ compuesto con $g$, e indica la expresión de $g(f(x))$. Entonces, esta nueva función sería:
 \[g(f(x)) = f(x)^2 - 1 = {\ln(x)}^2 - 1\]
-Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $g(x)$, y allá donde iría $x$, se escribie $f$ en su lugar. 
+Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $g(x)$, y allá donde iría $x$, se escribie $f$ en su lugar.
 
 \section{Límites de una Función}
-Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial. 
-\par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo. 
+Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
+\par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo.
 \subsection{Definición formal de límite:}
 Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ si: $\left|l - f(a - \delta)\right| < \varepsilon$.
 \par Todo esto se escribe así:
 \[\lim_{x\to a}f(x) = l\]
-\par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle. 
+\par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle.
 \par Imaginemos una función, por ejemplo $f(x) = x^2 - 1$. Veremos cómo es el límite cuando $f(x)$ tiende a 1. Tomando la definición de límite, necesitamos asegurar que para cualquier número $\varepsilon$ arbitrariamente pequeño, podemos encontrar otro número $\delta$ que cumpla una condición.
 \par Esta condición consiste en que para cualquier $\varepsilon$ positivo pero arbitrariamente pequeño, el valor de $\left|f(1 + \delta) - f(1 - \delta)\right|$ debe ser menor que $\varepsilon$, eso sí, con un valor de $\delta$ positivo y mayor que 0. La mejor forma de entender esta restricción es fijarse en la \autoref{fig:limit-definition}:
 
 \begin{figure}[ht]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[width=0.65\linewidth, height=7cm,
-            xmin=0.5, xmax=1.9,
-            ymin=-0.5, ymax=0.5,
-            axis lines = left,
-            xlabel=$x$, ylabel=$f(x)$,
-            thick
-            ]
-            %\addplot[black, dashed] coordinates {(1,-0.5) (1,0)};
-            \addplot[black, dashed] coordinates {(1.05,-0.5) (1.05,0.1025)};
-            \addplot[black, dashed] coordinates {(0.95,-0.5) (0.95,-0.0975)};
-            \addplot[blue, dashed] coordinates {(0.5,0.1025) (1.05,0.1025)};
-            \addplot[blue, dashed] coordinates {(0.5,-0.0975) (0.95,-0.0975)};
-            \addplot[color=red,domain=0:1.2,samples=30,ultra thick]{x^2-1};
-            \addplot[{Latex-Latex}] coordinates {(0.95,-0.45) (1.05,-0.45)} node[midway, above] {$2\delta$};
-            \addplot[{Latex-Latex}] coordinates {(1.2,-0.0975) (1.2,0.1025)} node[midway, right] {$\left|f(1 + \delta) - f(1 - \delta)\right|$};
-            \addplot[{Latex-Latex}] coordinates {(0.55,-0.2) (0.55,0.2)} node[midway, right] {$\varepsilon$};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Representación gráfica de la definición de límite}
-    \label{fig:limit-definition}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.65\linewidth, height=7cm,
+				xmin=0.5, xmax=1.9,
+				ymin=-0.5, ymax=0.5,
+				axis lines = left,
+				xlabel=$x$, ylabel=$f(x)$,
+				thick
+			]
+			%\addplot[black, dashed] coordinates {(1,-0.5) (1,0)};
+			\addplot[black, dashed] coordinates {(1.05,-0.5) (1.05,0.1025)};
+			\addplot[black, dashed] coordinates {(0.95,-0.5) (0.95,-0.0975)};
+			\addplot[blue, dashed] coordinates {(0.5,0.1025) (1.05,0.1025)};
+			\addplot[blue, dashed] coordinates {(0.5,-0.0975) (0.95,-0.0975)};
+			\addplot[color=red,domain=0:1.2,samples=30,ultra thick]{x^2-1};
+			\addplot[{Latex-Latex}] coordinates {(0.95,-0.45) (1.05,-0.45)} node[midway, above] {$2\delta$};
+			\addplot[{Latex-Latex}] coordinates {(1.2,-0.0975) (1.2,0.1025)} node[midway, right] {$\left|f(1 + \delta) - f(1 - \delta)\right|$};
+			\addplot[{Latex-Latex}] coordinates {(0.55,-0.2) (0.55,0.2)} node[midway, right] {$\varepsilon$};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Representación gráfica de la definición de límite}
+	\label{fig:limit-definition}
 \end{figure}
 
 Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre las alturas de la función en los puntos $x = 1- \delta$ y $x = 1 + \delta$ sea menor que $\varepsilon$. Entonces, como se puede ver en el dibujo, para cualquier $\varepsilon$ podemos encontrar un $\delta$ que cumpla esta condición.
 \par Una vez que hemos definido formalmente el concepto de límite, se pasará en los ejemplos a hacer una introducción más coloquial. Es muy importante saber que el límite de una función en un punto \textbf{no} es lo mismo que el valor de la función en ese punto, como se puede observar en el ejemplo 3. En muchas ocasiones coincide, pero nunca tiene por qué ser igual.
 
 \begin{examplebox}
-    \subsection*{Ejemplos gráficos de límites}
-    \subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
-    \begin{minipage}[b]{0.45\linewidth}
-        \begin{enumerate}[label=\arabic*., series=mylist]
-            \item \(\dlim_{x\to\frac{1}{2}} f(x)\) %\dlim es un comando nuevo de apuntes.cls que se encarga de que los límites están bien puestos
-            \item \(\dlim_{x \to 0} f(x)\) 
-            \item $\dlim_{x \to 0} g(x)$
-            \item $\dlim_{x \to 1} h(x)$
-        \end{enumerate}
-    \end{minipage}
-    \begin{minipage}[b]{0.45\linewidth}
-        \begin{enumerate}[resume=mylist]
-            \item \(\dlim_{x \to 2} h(x)\) 
-            \item $\dlim_{x \to 0} h(x)$
-            \item \(\dlim_{x \to 0} j(x)\) 
-            \item $ \dlim_{x \to -1} j(x)$
-        \end{enumerate}
-    \end{minipage}
+	\subsection*{Ejemplos gráficos de límites}
+	\subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
+	\begin{minipage}[b]{0.45\linewidth}
+		\begin{enumerate}[label=\arabic*., series=mylist]
+			\item \(\dlim_{x\to\frac{1}{2}} f(x)\) %\dlim es un comando nuevo de apuntes.cls que se encarga de que los límites están bien puestos
+			\item \(\dlim_{x \to 0} f(x)\)
+			\item $\dlim_{x \to 0} g(x)$
+			\item $\dlim_{x \to 1} h(x)$
+		\end{enumerate}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\begin{enumerate}[resume=mylist]
+			\item \(\dlim_{x \to 2} h(x)\)
+			\item $\dlim_{x \to 0} h(x)$
+			\item \(\dlim_{x \to 0} j(x)\)
+			\item $ \dlim_{x \to -1} j(x)$
+		\end{enumerate}
+	\end{minipage}
 
-    \begin{center}
-    \begin{minipage}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-        \begin{axis}[width=0.96\linewidth,
-            height=\linewidth,
-            xmax=1, xmin=-1,
-            ymax=1, ymin=-1,
-            axis lines = center,
-            xlabel = $x$,
-            ylabel= $f(x)$,
-            thick
-        ]
-        \addplot[color=red, domain=-1:1, samples=30, ultra thick]{0.5 - x^2};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0.5,0.25)};
-        \end{axis}
-        \end{tikzpicture}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-        \begin{axis}[width=0.96\linewidth,
-            height=\linewidth,
-            xmax=2, xmin=-2,
-            ymax=5, ymin=-0.1,
-            axis lines = center,
-            xlabel = $x$,
-            ylabel= $g(x)$,
-            thick
-        ]
-        \addplot[color=red, domain=-2:2, samples=30, ultra thick]{exp(x)};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0,1)};
-        \end{axis}
-        \end{tikzpicture}
-    \end{minipage}
+	\begin{center}
+		\begin{minipage}[b]{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[width=0.96\linewidth,
+						height=\linewidth,
+						xmax=1, xmin=-1,
+						ymax=1, ymin=-1,
+						axis lines = center,
+						xlabel = $x$,
+						ylabel= $f(x)$,
+						thick
+					]
+					\addplot[color=red, domain=-1:1, samples=30, ultra thick]{0.5 - x^2};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0.5,0.25)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[width=0.96\linewidth,
+						height=\linewidth,
+						xmax=2, xmin=-2,
+						ymax=5, ymin=-0.1,
+						axis lines = center,
+						xlabel = $x$,
+						ylabel= $g(x)$,
+						thick
+					]
+					\addplot[color=red, domain=-2:2, samples=30, ultra thick]{exp(x)};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0,1)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
 
-    \begin{minipage}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-        \begin{axis}[width=0.96\linewidth,
-            height=\linewidth,
-            xmax=3, xmin=-1,
-            ymax=11, ymin=-11,
-            axis lines = center,
-            xlabel = $x$,
-            ylabel= $h(x)$,
-            thick
-        ]
-        \addplot[color=red, domain=-1:0.99, samples=30, ultra thick]{1/(x-1)};
-        \addplot[color=red, domain=1.01:3, samples=30, ultra thick]{1/(x-1)};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(2, 1)};
-        \end{axis}
-        \end{tikzpicture}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[b]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}
-        \begin{axis}[width=0.96\linewidth,
-            height=\linewidth,
-            xmax=2.1, xmin=-2.1,
-            ymax=1.1, ymin=-0.6,
-            axis lines = center,
-            xlabel = $x$,
-            ylabel= $j(x)$,
-            thick
-        ]
-        \addplot[color=red, domain=-2:0, samples=60, ultra thick]{0.75+0.2*x};
-        \addplot[color=red, domain=0:2, samples=60, ultra thick]{0.25-0.25*x};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.75)};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.25)};
-        \addplot[mark=*, mark size = 3pt, draw=red, fill=red, thick] coordinates {(0, 0.5)};
-        \end{axis}
-        \end{tikzpicture}
-    \end{minipage}
-    \end{center}
-    \subsubsection*{1, 2, 3, 5, 6, 8}
-    Estos límites existen, aunque no exista el valor de la función en el punto. Siempre podemos acercarnos tanto al valor de $x$ al que tiende el límite como haga falta para poder aproximarnos a un valor fijo en el eje $y$.
-    \subsubsection*{4, 7}
-    En el caso de $h(x)$ cuando $x \to 1$, como hay una asíntota vertical, no existe el límite. 
-    \par En el caso de $j(x)$ cuando $x \to 0$, se observa que sí existe $j(0)$, sin embargo, el límite no, ya que no podemos acercarnos al punto $x = 0$ por la izquierda y por la derecha, y reducir arbitrariamente la diferencia de alturas.
+		\begin{minipage}[b]{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[width=0.96\linewidth,
+						height=\linewidth,
+						xmax=3, xmin=-1,
+						ymax=11, ymin=-11,
+						axis lines = center,
+						xlabel = $x$,
+						ylabel= $h(x)$,
+						thick
+					]
+					\addplot[color=red, domain=-1:0.99, samples=50, ultra thick]{0.5/(x-1)};
+					\addplot[color=red, domain=1.01:3, samples=50, ultra thick]{0.5/(x-1)};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(2, 0.5)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[width=0.96\linewidth,
+						height=\linewidth,
+						xmax=2.1, xmin=-2.1,
+						ymax=1.1, ymin=-0.6,
+						axis lines = center,
+						xlabel = $x$,
+						ylabel= $j(x)$,
+						thick
+					]
+					\addplot[color=red, domain=-2:0, samples=60, ultra thick]{0.75+0.2*x};
+					\addplot[color=red, domain=0:2, samples=60, ultra thick]{0.25-0.25*x};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.75)};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=gray!5, thick] coordinates {(0, 0.25)};
+					\addplot[mark=*, mark size = 3pt, draw=red, fill=red, thick] coordinates {(0, 0.5)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{center}
+	\subsubsection*{1, 2, 3, 5, 6, 8}
+	Estos límites existen, aunque no exista el valor de la función en el punto. Siempre podemos acercarnos tanto al valor de $x$ al que tiende el límite como haga falta para poder aproximarnos a un valor fijo en el eje $y$.
+	\subsubsection*{4, 7}
+	En el caso de $h(x)$ cuando $x \to 1$, como hay una asíntota vertical, no existe el límite.
+	\par En el caso de $j(x)$ cuando $x \to 0$, se observa que sí existe $j(0)$, sin embargo, el límite no, ya que no podemos acercarnos al punto $x = 0$ por la izquierda y por la derecha, y reducir arbitrariamente la diferencia de alturas.
 
 \end{examplebox}
 
 \subsection{Límites de una función en el infinito}
 También puede resultar de mucho interés observar cómo es el comportamiento de una función $f(x)$ cuando esta toma valores de $x$ muy altos. Para ello, se toman límites en el infinito, de la siguiente forma:
 \[ l = \lim_{x \to \infty} f(x)\]
-Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$.
+Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$, por lo que no está definido.
+\par La definición formal del límite de una función en el infinito es:
+\[\forall \varepsilon > 0\; \exists \; \delta > 0\;|\;\left| f(\delta) - l\right| < \epsilon\]
+Donde $l = \dlim_{x \to \infty}{f(x)}$
 
 \newpage
 \listoftodos
