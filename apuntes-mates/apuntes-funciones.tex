@@ -77,9 +77,9 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 		\item $g(x) = \sqrt{x^2 - 1}$
 		\item $h(x) = \arcsen(x)$
 		\item $j(x) = \dfrac{x - 3}{x^2 - 4}$
-		\item $k(x) = \dfrac{\ln(x + 3)}{x^2 + x - 2}$ Ejercicio para el lector. $D(k) = (-3, \infty] - \{-2, 1\}$
+		\item $k(x) = \dfrac{\ln(x + 3)}{x^2 + x - 2}$ Ejercicio para el lector. $D(k) = (-3, \infty) - \{-2, 1\}$
 	\end{enumerate}
-	De forma general, el dominio de una función $f$, lo escribiremos como $D(f)$. La solución a esto \textbf{siempre será un conjunto de valores}, que podemos escribir como un intervalo (eso de utilizar corchetes y paréntesis $\to$ [-1, 3) ), o una unión de intervalos, o un conjunto excluyendo algunos valores. La forma de determinar qué conjunto es el dominio, es \textit{buscar cuándo no se puede calcular la función}. En el caso de divisiones, cuándo se divide por 0, o en el caso de raíces cuadradas, cuándo el radicando (lo que hay dentro de la raíz) es negativo.
+	De forma general, el dominio de una función $f$, lo escribiremos como $D(f)$. La solución a esto \textbf{siempre será un conjunto de valores}, que podemos escribir como un intervalo (eso de utilizar corchetes y paréntesis $\to$ [-1, 3) ), o una unión de intervalos, o un conjunto excluyendo algunos valores. La forma de determinar qué conjunto es el dominio, es \emph{buscar cuándo no se puede calcular la función}. En el caso de divisiones, cuándo se divide por 0, o en el caso de raíces cuadradas, cuándo el radicando (lo que hay dentro de la raíz) es negativo.
 			\subsubsection*{1.}
 			En este caso, $f(x) = \ln(x)$. Recordando un poco la definición del logaritmo neperiano, sabremos que no está definido para números negativos o 0, es decir, que lo que haya dentro del logaritmo tiene que ser siempre positivo. Con esto, podemos escribir una inecuación:
 			\[ x > 0\]
@@ -117,11 +117,11 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 
 	\subsubsection*{1.}
 	Para el caso de $f(x) = x^2 + 1$, sabemos que todos los posibles valores de $x^2$ son positivos o 0. Entonces, al sumar 1, todos los valores de $f(x)$ serán o 1 ($x = 0$) o mayores que 1 ($x \neq 0$), así que finalmente:
-	\[ R(f) = [1, \infty] \]
+	\[ R(f) = [1, \infty) \]
 
 	\subsubsection*{2.}
-	Para el caso de $g(x) = \sqrt{x}$, sabemos que serán siempre valores positivos. Conviene recordar que el operador $\sqrt{a}$ no es lo mismo que las soluciones de $x^2 = a$. Entonces, como todo lo que sale de $\sqrt{}$ es positivo:
-	\[ R(g) = [0, \infty] \]
+	Para el caso de $g(x) = \sqrt{x}$, sabemos que serán siempre valores positivos. Conviene recordar que el operador $\sqrt{a}$ no es lo mismo que las soluciones de $x^2 = a$. Entonces, como todo lo que sale de $\sqrt{\ }$ es positivo:
+	\[ R(g) = [0, \infty) \]
 \end{examplebox}
 
 \section{Operaciones con funciones} %encabezado 1
@@ -145,7 +145,7 @@ Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
 \par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo.
 \subsection{Definición formal de límite:}
-Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$, si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ si: $\left|l - f(a - \delta)\right| < \varepsilon$.
+Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe como $\dlim_{x \to a} f(x)$), si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ ($x \to a$) si: $\left|l - f(a - \delta)\right| < \varepsilon$.
 \par Todo esto se escribe así:
 \[\lim_{x\to a}f(x) = l\]
 \par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle.
@@ -292,6 +292,126 @@ Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la m
 \par La definición formal del límite de una función en el infinito es:
 \[\forall \varepsilon > 0\; \exists \; \delta > 0\;|\;\left| f(\delta) - l\right| < \epsilon\]
 Donde $l = \dlim_{x \to \infty}{f(x)}$
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.4\linewidth,
+				xmax=5.3, xmin=-2.3,
+				ymax=4.3, ymin=-0.6,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $f(x)$,
+				thick
+			]
+			\addplot[red, ultra thick, samples=80, domain=-2.3:5.3]{e^(-x)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Representación de $f(x) = e^{-x}$, con una asíntota horizontal}\label{fig:asintota-horiz}
+\end{figure}
+
+\section{Asíntotas de una función}
+Al observar la representación de una función, la presencia de asíntotas puede resultar evidente si se observa algo como esto:
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+				xmax=5.3, xmin=-5.3,
+				ymax=4.3, ymin=-4.3,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $f(x)$,
+				thick
+			]
+			\addplot[red, ultra thick, samples=80, domain=-5.3:-0.01]{1/x};
+			\addplot[red, ultra thick, samples=80, domain=0.01:5.3]{1/x};
+		\end{axis}
+	\end{tikzpicture}
+	\hfill
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+				xmax=5.3, xmin=-1.3,
+				ymax=4.3, ymin=-4.3,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $f(x)$,
+				thick
+			]
+			\addplot[red, ultra thick, samples=120, domain=0.0001:5.3]{-log10(x)};
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+Pero, viendo la gráfica de la siguiente función, se podría decir si presenta asíntotas?
+\[f(x) = \frac{x^3 - 2x - 3}{x^2 - x + 2}\]
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+				xmax=5.3, xmin=-5.3,
+				ymax=4.3, ymin=-4.3,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $f(x)$,
+				thick
+			]
+			\addplot[red, ultra thick, samples=80, domain=-5.3:5.3]{(x^3 - 2*x - 3)/(x^2 - x + 2)};
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+La respuesta es que sí, que la función $f(x)$ presenta dos asíntotas oblicuas en $\pm \infty$, pero esto no es nada evidente hasta que no se representa la función en una escala mayor todavía, y haciendo la trampa de saber que de antemano, las asíntotas son la recta $y = x + 1$, que podemos representar:
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.5\linewidth,
+				xmax=10.3, xmin=-10.3,
+				ymax=10.3, ymin=-10.3,
+				axis lines = center,
+				xlabel = $x$,
+				ylabel= $f(x)$,
+				thick
+			]
+			\addplot[red, ultra thick, samples=80, domain=-10:10]{(x^3 - 2*x - 3)/(x^2 - x + 2)};
+			\addplot[gray, dashed, samples=5, domain=-10:10]{x + 1};
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+Esto plantea la pregunta: ¿Qué son las asíntotas de una función exactamente?
+\par El concepto de `asíntota' se utiliza para describir un \emph{comportamiento} de la función. Este comportamiento consiste en acercarse cada vez más, pero sin llegar a tocar, un valor. En los casos que se han presentado anteriormente, se pueden observar asíntotas horizontales, verticales y oblicuas. Reciben estos nombres atendiendo a si la hipotética recta a la que se aproxima la función es una recta horizontal, vertical, u oblicua.
+
+\subsection{Asíntotas verticales}
+Este tipo de asíntotas se dan \emph{para un valor de x concreto}. Matemáticamente, se definen así:
+\[\dlim_{x\to a} f(x) = \pm \infty\]
+Esto quiere decir que cuando $x$ se aproxima mucho a $a$, el valor de la función $f(x)$ ``explota'' hacia infinito (positivo o negativo, cualquiera es válido).
+\par Pero evidentemente, se entenderán mejor con ejemplos. Estas asíntotas se suelen dar cuando hay un denominador o un argumento de un logaritmo que tiende a 0.
+
+\subsection{Asíntotas horizontales}
+Este tipo de asíntotas se dan \emph{cuando x tiende a $\pm \infty$}. Son asíntotas que tienen asociada una representación de la forma $y = A$, donde $A$ es el valor al que la función se aproxima. Matemáticamente, se definen así:
+\[\dlim_{x\to \pm \infty} f(x) = A\]
+Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a un valor muy concreto, que hemos llamado $A$ en nuestra definición.
+\par Este tipo de asíntotas suelen aparecer cuando en la función hay un cociente en el que el denominador crece mucho más rapido que el numerador. Si se encuentra una función donde esto se cumple, es una perfecta candidata a presentar asíntotas horizontales.
+
+\subsubsection{Asíntotas Oblicuas}
+Este tipo de asíntotas se dan también \emph{cuando x tiende a $\pm \infty$}. La representación que estas asíntotas tienen asociada es $y = mx + n$, es decir, la expresión de una recta. Su definición formal es la siguiente:
+\[\dlim_{x\to \pm \infty} \left[f(x) - (mx + n)\right]= 0\]
+Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a la recta $y = mx + n$. Los valores de $m$ y de $n$ habrá que determinarlos, para lo que utilizaremos sus definiciones, a continuación.
+\par Este tipo de asíntotas está presente en cocientes de polinomios donde el grado del numerador sea siempre 1 mayor que el del denominador (como un polinomio de orden 4 entre uno de orden 3). Las definiciones de $m$ y $n$ son:
+\begin{align*}
+	m & = \dlim_{x \to \pm \infty} \dfrac{f(x)}{x} \\
+	n & = \dlim_{x \to \pm \infty} f(x) - mx       \\
+\end{align*}
+
+\todo{Ejemplos de asíntotas}
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\linewidth]{figures/rutina.png}
+  \caption{Rutina ideal para estudiar}
+  \label{fig:rutina}
+\end{figure}
 
 \newpage
 \listoftodos

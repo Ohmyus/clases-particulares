@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  26 MAR 2026 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  6 APR 2026 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1107,8 +1107,28 @@ NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (i
 [4]
 
 [5]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 310.
 
-[6] (out/apuntes-funciones.aux
+
+[6]
+
+[7]
+Package hyperref Info: bookmark level for unknown todoitem defaults to 0 on input line 406.
+<figures/rutina.png, id=195, 1445.4pt x 813.0375pt>
+File: figures/rutina.png Graphic file (type png)
+<use figures/rutina.png>
+Package pdftex.def Info: figures/rutina.png  used on input line 411.
+(pdftex.def)             Requested size: 227.62206pt x 128.02927pt.
+
+
+[8] (out/apuntes-funciones.tdo)
+\tf@tdo=\write5
+\openout5 = `apuntes-funciones.tdo'.
+
+
+
+[9 <./figures/rutina.png>] (out/apuntes-funciones.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -1117,21 +1137,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `apuntes-funciones.out' has not changed.
-(rerunfilecheck)             Checksum: 3F042870FB6EF61DB262C4297223CBA7;2029.
+(rerunfilecheck)             Checksum: B1C5BFF8CEE5816B23B9D35A5446C1B9;2890.
  ) 
 Here is how much of TeX's memory you used:
- 47351 strings out of 467800
- 1095505 string characters out of 5436061
- 1751759 words of memory out of 5000000
- 75051 multiletter control sequences out of 15000+600000
- 712584 words of font info for 163 fonts, out of 8000000 for 9000
+ 47483 strings out of 467800
+ 1097780 string characters out of 5436061
+ 1760255 words of memory out of 5000000
+ 75146 multiletter control sequences out of 15000+600000
+ 717398 words of font info for 177 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,13n,110p,1055b,2329s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on out/apuntes-funciones.pdf (6 pages, 329814 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on out/apuntes-funciones.pdf (9 pages, 1072309 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 47341 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 322 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 49434 words of extra memory for PDF output out of 51595 (max. 10000000)
 
