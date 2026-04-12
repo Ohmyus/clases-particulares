@@ -9,6 +9,9 @@
 	\LARGE \textbf{Apuntes de Funciones} %Texto muy grande y en negrita
 \end{center}
 
+\tableofcontents
+
+\newpage
 \section{Definición de función} %encabezado 1
 Una función es una aplicación matemática que recibe uno o varios argumentos de entrada y los relaciona con uno o varios argumentos de salida, de forma que cada argumento de entrada corresponde con un argumento de salida. Matemáticamente, al definir una función también se especifica qué conjuntos de números son el de procedencia y el de destino:
 \[\begin{array}{c} f: x \to f(x) \\
@@ -145,7 +148,7 @@ Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
 \par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo.
 \subsection{Definición formal de límite:}
-Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe como $\dlim_{x \to a} f(x)$), si para cualquier número \underline{arbitrariamente pequeño} $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número arbitrariamente pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ ($x \to a$) si: $\left|l - f(a - \delta)\right| < \varepsilon$.
+Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe como $\dlim_{x \to a} f(x)$), si para cualquier número \emph{arbitrariamente} pequeño $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ ($x \to a$) si: $\left|l - f(a - \delta)\right| < \varepsilon$.
 \par Todo esto se escribe así:
 \[\lim_{x\to a}f(x) = l\]
 \par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle.
@@ -280,17 +283,24 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
 	\subsubsection*{1, 2, 3, 5, 6, 8}
 	Estos límites existen, aunque no exista el valor de la función en el punto. Siempre podemos acercarnos tanto al valor de $x$ al que tiende el límite como haga falta para poder aproximarnos a un valor fijo en el eje $y$.
 	\subsubsection*{4, 7}
-	En el caso de $h(x)$ cuando $x \to 1$, como hay una asíntota vertical, no existe el límite.
+	En el caso de $h(x)$ cuando $x \to 1$, como hay una asíntota vertical con ramas opuestas, no existe el límite.
 	\par En el caso de $j(x)$ cuando $x \to 0$, se observa que sí existe $j(0)$, sin embargo, el límite no, ya que no podemos acercarnos al punto $x = 0$ por la izquierda y por la derecha, y reducir arbitrariamente la diferencia de alturas.
 
 \end{examplebox}
+
+% \[
+% 	f(x,y)=
+% 	\begin{cases}
+% 		\dfrac{xy}{x^2+y^2} & \text{si } (x,y)\neq(0,0) \\
+% 		0                   & \text{si } (x,y)=(0,0)    \\
+% 	\end{cases} \]
 
 \subsection{Límites de una función en el infinito}
 También puede resultar de mucho interés observar cómo es el comportamiento de una función $f(x)$ cuando esta toma valores de $x$ muy altos. Para ello, se toman límites en el infinito, de la siguiente forma:
 \[ l = \lim_{x \to \infty} f(x)\]
 Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$, por lo que no está definido.
 \par La definición formal del límite de una función en el infinito es:
-\[\forall \varepsilon > 0\; \exists \; \delta > 0\;|\;\left| f(\delta) - l\right| < \epsilon\]
+\[\forall \varepsilon > 0,\; \exists \; \delta > 0\;\mid\;\left| f(x > \delta) - l\right| < \epsilon\]
 Donde $l = \dlim_{x \to \infty}{f(x)}$
 
 \begin{figure}[ht]
@@ -309,6 +319,48 @@ Donde $l = \dlim_{x \to \infty}{f(x)}$
 	\end{tikzpicture}
 	\caption{Representación de $f(x) = e^{-x}$, con una asíntota horizontal}\label{fig:asintota-horiz}
 \end{figure}
+
+\subsection{Cálculo de los límites de una función}
+Para calcular el valor del límite de una función, cuando $x$ tiende a un valor, se comienza por sustituir el valor de $x$ en la función.
+\par \todo{Ejemplos de cálculo de límites sin indeterminaciones}
+\par Sin embargo, se pueden dar casos en los que simplemente sustituir el valor lleve a resultados que no tienen sentido analíticamente, pero los límites sí que existen. Esto ocurre porque al sustituir el valor, estamos asumiendo que el límite coincide con el valor de la función. Si no hay indeterminaciones, esto es correcto, pero si las hay, el procedimiento es más complejo.
+
+\subsection{Tipos de indeterminaciones}
+\begin{enumerate}
+	\item \(\left(\frac{k}{0}\right)\)
+	\item \(\left(\frac{0}{0}\right)\)
+	\item \(\left(\frac{\infty}{\infty}\right)\)
+	\item \(\infty - \infty\)
+	\item \(0 \cdot \infty\)
+	\item \(1^\infty\)
+	\item \(0^0\)
+	\item \(\infty^0\)
+\end{enumerate}
+
+\subsubsection{Indeterminación \emph{k}/0}
+Esta indeterminación se puede resolver tomando los límites laterales. Generalmente, una de estas indeterminaciones implica que el límite tiende a infinito, pero hay ambigüedad en el signo. Por ello, al tomar los límites laterales, se puede determinar si el límite existe (ambos infinitos tienen el mismo signo) o si el límite no existe (no coinciden los signos).
+\todo{Ejemplo indeterminación 0/0}
+
+\subsubsection{Indeterminación k/0}
+Esta indeterminación se puede dar en dos casos distintos:
+\begin{itemize}
+	\item Cuando $x \to a$, ó:
+	\item Cuando $x \to \infty$ (mucho menos frecuente)
+\end{itemize}
+En el caso de que se de cuando $x \to a$, la forma de evitar esta indeterminación es factorizando las funciones del numerador y del denominador. Si el numerador y/o el denominador no son polinomios, entonces el procedimiento es hacer un desarrollo en serie (eso son matemáticas por encima del nivel de bachillerato) alrededor de $a$ para poder factorizar.
+\par \todo{Ejemplo indeterminación 0/0}
+
+\subsubsection{Indeterminación \texorpdfstring{$\left(\dfrac{\infty}{\infty}\right)$}{(∞/∞)}}
+Esta indeterminación se resuelve atendiendo a qué orden es mayor, si el orden del infinito del numerador, o el del denominador. Podemos clasificar los órdenes de la siguiente manera:
+\[x^x \gg a^x \gg x^n \gg x \gg x^{\frac1{n}} \gg \log{x};\quad \text{con}\ n \in \mathbb{N}\]
+En el caso de que ambas funciones tengan el mismo orden, se compara el grado del numerador frente al del denominador, para determinar cuál ``gana''. Si gana el numerador, el resultado del límite es $\infty$, y si gana el denominador, el resultado es 0.
+\par \todo{Ejemplo indeterminación $\left(\dfrac{\infty}{\infty}\right)$}
+
+\subsubsection{Indeterminación \texorpdfstring{$\infty-\infty$}{∞-∞}}
+En este caso, la forma de evitar la indeterminación es convertirla a una del tipo de $\frac{\infty}{\infty}$ o del tipo $\frac{0}{0}$, que ya es conocido el método para resolverlas.
+\par \todo{Ejemplo indeterminación $\left(\infty-\infty\right)$}
+
+\subsubsection{Indeterminación \texorpdfstring{$0 \cdot \infty$}{0·∞}}
 
 \section{Asíntotas de una función}
 Al observar la representación de una función, la presencia de asíntotas puede resultar evidente si se observa algo como esto:
@@ -361,7 +413,8 @@ Pero, viendo la gráfica de la siguiente función, se podría decir si presenta 
 \end{figure}
 
 La respuesta es que sí, que la función $f(x)$ presenta dos asíntotas oblicuas en $\pm \infty$, pero esto no es nada evidente hasta que no se representa la función en una escala mayor todavía, y haciendo la trampa de saber que de antemano, las asíntotas son la recta $y = x + 1$, que podemos representar:
-\begin{figure}[ht]
+
+\begin{figure}[!ht]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[width=0.5\linewidth,
@@ -393,7 +446,7 @@ Este tipo de asíntotas se dan \emph{cuando x tiende a $\pm \infty$}. Son asínt
 Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a un valor muy concreto, que hemos llamado $A$ en nuestra definición.
 \par Este tipo de asíntotas suelen aparecer cuando en la función hay un cociente en el que el denominador crece mucho más rapido que el numerador. Si se encuentra una función donde esto se cumple, es una perfecta candidata a presentar asíntotas horizontales.
 
-\subsubsection{Asíntotas Oblicuas}
+\subsection{Asíntotas Oblicuas}
 Este tipo de asíntotas se dan también \emph{cuando x tiende a $\pm \infty$}. La representación que estas asíntotas tienen asociada es $y = mx + n$, es decir, la expresión de una recta. Su definición formal es la siguiente:
 \[\dlim_{x\to \pm \infty} \left[f(x) - (mx + n)\right]= 0\]
 Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a la recta $y = mx + n$. Los valores de $m$ y de $n$ habrá que determinarlos, para lo que utilizaremos sus definiciones, a continuación.
@@ -402,16 +455,7 @@ Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la fu
 	m & = \dlim_{x \to \pm \infty} \dfrac{f(x)}{x} \\
 	n & = \dlim_{x \to \pm \infty} f(x) - mx       \\
 \end{align*}
-
-\todo{Ejemplos de asíntotas}
-
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.5\linewidth]{figures/rutina.png}
-  \caption{Rutina ideal para estudiar}
-  \label{fig:rutina}
-\end{figure}
+\par \todo{Ejemplos de asíntotas}
 
 \newpage
 \listoftodos
