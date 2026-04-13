@@ -289,11 +289,11 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
 \end{examplebox}
 
 % \[
-% 	f(x,y)=
-% 	\begin{cases}
-% 		\dfrac{xy}{x^2+y^2} & \text{si } (x,y)\neq(0,0) \\
-% 		0                   & \text{si } (x,y)=(0,0)    \\
-% 	\end{cases} \]
+%	f(x,y)=
+%	\begin{cases}
+%		\dfrac{xy}{x^2+y^2} & \text{si } (x,y)\neq(0,0) \\
+%		0                   & \text{si } (x,y)=(0,0)    \\
+%	\end{cases} \]
 
 \subsection{Límites de una función en el infinito}
 También puede resultar de mucho interés observar cómo es el comportamiento de una función $f(x)$ cuando esta toma valores de $x$ muy altos. Para ello, se toman límites en el infinito, de la siguiente forma:
@@ -301,7 +301,7 @@ También puede resultar de mucho interés observar cómo es el comportamiento de
 Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$, por lo que no está definido.
 \par La definición formal del límite de una función en el infinito es:
 \[\forall \varepsilon > 0,\; \exists \; \delta > 0\;\mid\;\left| f(x > \delta) - l\right| < \epsilon\]
-Donde $l = \dlim_{x \to \infty}{f(x)}$
+Donde $l = \dlim_{x \to \infty}{f(x)}$. Esto quiere decir, que existe un valor de $\delta$ para cada valor de $\varepsilon$ que se nos ocurra, que garantizará que la diferencia entre $f(x)$ y el valor $l$ será menor que el propio $\varepsilon$, siempre que $x > \delta$.
 
 \begin{figure}[ht]
 	\centering
@@ -339,15 +339,16 @@ Para calcular el valor del límite de una función, cuando $x$ tiende a un valor
 
 \subsubsection{Indeterminación \emph{k}/0}
 Esta indeterminación se puede resolver tomando los límites laterales. Generalmente, una de estas indeterminaciones implica que el límite tiende a infinito, pero hay ambigüedad en el signo. Por ello, al tomar los límites laterales, se puede determinar si el límite existe (ambos infinitos tienen el mismo signo) o si el límite no existe (no coinciden los signos).
-\todo{Ejemplo indeterminación 0/0}
+\todo{Ejemplo indeterminación k/0}
 
-\subsubsection{Indeterminación k/0}
+\subsubsection{Indeterminación 0/0}
 Esta indeterminación se puede dar en dos casos distintos:
 \begin{itemize}
 	\item Cuando $x \to a$, ó:
 	\item Cuando $x \to \infty$ (mucho menos frecuente)
 \end{itemize}
 En el caso de que se de cuando $x \to a$, la forma de evitar esta indeterminación es factorizando las funciones del numerador y del denominador. Si el numerador y/o el denominador no son polinomios, entonces el procedimiento es hacer un desarrollo en serie (eso son matemáticas por encima del nivel de bachillerato) alrededor de $a$ para poder factorizar.
+\par En el caso de que se de cuando $x \to \infty$, se resuelve atendiendo a los órdenes de las funciones, es decir, viendo qué función tiende a 0 más rápido. \todo{Explicar órdenes de convergencia al 0}
 \par \todo{Ejemplo indeterminación 0/0}
 
 \subsubsection{Indeterminación \texorpdfstring{$\left(\dfrac{\infty}{\infty}\right)$}{(∞/∞)}}
@@ -357,10 +358,24 @@ En el caso de que ambas funciones tengan el mismo orden, se compara el grado del
 \par \todo{Ejemplo indeterminación $\left(\dfrac{\infty}{\infty}\right)$}
 
 \subsubsection{Indeterminación \texorpdfstring{$\infty-\infty$}{∞-∞}}
-En este caso, la forma de evitar la indeterminación es convertirla a una del tipo de $\frac{\infty}{\infty}$ o del tipo $\frac{0}{0}$, que ya es conocido el método para resolverlas.
+En este caso, la forma de evitar la indeterminación es convertirla a una del tipo de $\frac{\infty}{\infty}$ o del tipo $\frac{0}{0}$, que ya es conocido el método para resolverlas. Esto se hace multiplicando y dividiendo por la expresión conjugada.
 \par \todo{Ejemplo indeterminación $\left(\infty-\infty\right)$}
 
 \subsubsection{Indeterminación \texorpdfstring{$0 \cdot \infty$}{0·∞}}
+\todo{Indeterminación $\left(0 \cdot \infty\right)$}
+
+\section{Continuidad de funciones}
+La continuidad de una función se puede entender, de forma conceptual, como la idea de si se puede pintar sin levantar el lápiz del papel. Esta idea tiene sus limitaciones, pero es una buena intuición.
+\par Hay una definición algo más rigurosa de lo que es la continuidad y las condiciones que una función tiene que cumplir para que se pueda decir que es continua:
+\par Los \textbf{criterios de continuidad} son las condiciones que una función $f(x)$ debe cumplir en el punto $x = a$ para poder asegurar que es continua. Son tres:
+\begin{enumerate}
+	\item \(\exists f(a) \)
+	\item \(\exists \dlim_{x \to a}f(x) \)
+	\item \(f(a) = \dlim_{x \to a}f(x)\)
+\end{enumerate}
+
+Para poder asegurar que $f(x)$ es continua en $x = a$, se tienen que cumplir las tres condiciones. Si no se cumple alguna de ellas, entonces $f(x)$ presenta una discontinuidad en $x=a$.
+
 
 \section{Asíntotas de una función}
 Al observar la representación de una función, la presencia de asíntotas puede resultar evidente si se observa algo como esto:
@@ -447,6 +462,7 @@ Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la fu
 \par Este tipo de asíntotas suelen aparecer cuando en la función hay un cociente en el que el denominador crece mucho más rapido que el numerador. Si se encuentra una función donde esto se cumple, es una perfecta candidata a presentar asíntotas horizontales.
 
 \subsection{Asíntotas Oblicuas}
+\label{sec:oblicuas}
 Este tipo de asíntotas se dan también \emph{cuando x tiende a $\pm \infty$}. La representación que estas asíntotas tienen asociada es $y = mx + n$, es decir, la expresión de una recta. Su definición formal es la siguiente:
 \[\dlim_{x\to \pm \infty} \left[f(x) - (mx + n)\right]= 0\]
 Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a la recta $y = mx + n$. Los valores de $m$ y de $n$ habrá que determinarlos, para lo que utilizaremos sus definiciones, a continuación.
@@ -455,8 +471,131 @@ Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la fu
 	m & = \dlim_{x \to \pm \infty} \dfrac{f(x)}{x} \\
 	n & = \dlim_{x \to \pm \infty} f(x) - mx       \\
 \end{align*}
+
+Sin embargo, existe una forma más rápida de calcular las asíntotas de una función (si la función a estudiar es un cociente de polinomios). Este método consiste en hacer la división de polinomios. El cociente será la ecuación de la recta a la que la función se aproxima.
+\\\todo{Demostración del método ``rápido'' para calcular asíntotas oblicuas}
 \par \todo{Ejemplos de asíntotas}
 
+\section{Análisis de Funciones}
+El análisis de funciones comienza tomando la expresión analítica de una función, y a partir de esto se extrae toda la información posible de la función. Para hacer un análisis completo, se considerarán todos los siguientes aspectos:
+
+\begin{enumerate}
+	\item Dominio de la función
+	\item Puntos de corte con los ejes
+	\item Continuidad
+	\item Asíntotas (verticales y en el infinito)
+	\item Puntos críticos (extremos relativos)
+	\item Intervalos de crecimiento y decrecimiento
+	\item Máximos y mínimos
+	\item Concavidad
+\end{enumerate}
+
+Esto implica que para cada función, se debe hacer un estudio de todos los puntos mencionados. Es un ejercicio largo, en el que se aplican todos los contenidos aquí discutidos.
+
+\subsection{Dominio de la función}
+Comenzamos por calcular y escribir el dominio de la función. Como recordatorio, debemos buscar aquellas operaciones `conflictivas' que pueden resultar en valores de $x$ para los que $f(x)$ no estará definida.
+\par Una vez resuelto el dominio, se presenta de la siguiente forma:
+\[D(f) = (-\infty, 1) \cup [2, +\infty)\]
+
+\subsection{Puntos de corte con los ejes}
+Los puntos de corte con el eje $X$ se dan cuando $y = 0$. Para encontrarlos, se debe resolver la ecuación $f(x) = 0$, y encontrar todas soluciones.
+\par El punto de corte con el eje $Y$ se obtiene de introducir el valor $x = 0$ en la función.
+
+\subsection{Continuidad}
+Para estudiar la continuidad de la función, hay que recordar lo que hemos aprendido hasta ahora. Sabemos comprobar la continuidad de la función en un punto, pero no sabemos garantizarla de forma general. Por ello, es importante saber que las funciones son continuas \emph{en general}, y que presentan discontinuidades en puntos especiales. Es por ello que haremos el estudio de la continuidad en:
+\begin{itemize}
+	\item Puntos de cambio de definición
+	\item Puntos fuera del dominio
+\end{itemize}
+
+En estos puntos es recomendable comprobar las tres condiciones de continuidad, aunque la primera no se cumpla (porque esos límites los utilizaremos después).
+
+\subsection{Asíntotas}
+Aquí es donde utilizaremos los límites que hemos calculado en el apartado de continuidad. Se debe estudiar si la función presenta asíntotas verticales (mirando si tiene un denominador que se hace cero)\footnote{Esto ya se ha hecho en el estudio del dominio}, y si hay asíntotas en el infinito, que pueden ser verticales u oblicuas.
+
+\subsubsection{Asíntotas verticales}
+Al haber estudiado la continuidad en los puntos que están fuera del dominio, se habrá calculado ya los límites laterales alrededor de estos puntos, se sabrá si hay o no asíntotas verticales. Una vez encontradas y estudiadas, se puede escribir el estudio de las asíntotas verticales que presenta la función de la siguiente manera:
+\par $f(x)$ presenta asíntoas verticales en $x = a$, $x = b$\dots, donde $a, b$ son los valores de $x$ donde hay asíntotas verticales.
+
+\subsubsection{Asíntotas horizontales}
+Si la función es un cociente de polinomios donde el denominador tiene un grado \textbf{igual o mayor} que el del numerador, se debe sospechar que presentará asíntotas horizontales. Para confirmarlo, se calculan los límites de $f(x)$ en $\pm \infty$.
+\par Si la funcion presenta asíntotas horizontales, se indicará de la siguiente forma:
+\par $f(x)$ presenta una asíntota horizontal en $\pm\infty$ de la forma $y = A$.
+
+\subsubsection{Asíntotas oblicuas}
+En el caso de que la función sea un cociente de polinomios donde el grado del numerador es uno mayor que el del denominador, habrá asíntotas oblicuas. En este caso, se debe calcular de la forma preferida la asíntota (con la definición de los límites de la \autoref{sec:oblicuas} o haciendo la división), y una vez conocidos $m$ y $n$, se indica la misma de la siguiente manera:
+\par $f(x)$ presenta una asíntota oblicua de la forma $y = mx + n$ en $\pm\infty$.
+
+\subsection{Puntos críticos (extremos relativos)}
+Ahora comienza la parte del estudio variacional de la función. Los puntos críticos son aquellos donde la función tiene pendiente nula, es decir, cuando su derivada vale 0. Estos puntos se calculan resolviendo la ecuación
+\[f'(x) = 0\]
+El estudio de si estos puntos son máximos, mínimos o puntos de inflexión se hace a continuación, en el estudio del crecimiento y decrecimiento de la función.
+
+\subsection{Crecimiento y decrecimiento}
+Una vez calculada $f'(x)$, se puede determinar que $f(x)$ es creciente cuando $f'(x) > 0$ y lo contrario, que $f(x)$ es decreciente cuando $f'(x) < 0$.
+\par Para encontrar los intervalos de crecimiento y decrecimiento, se hace un estudio del signo de $f'(x)$. Este estudio consiste en pintar la recta real, colocar los valores donde $f'(x) = 0$ sobre ella, y además los puntos excluidos del dominio (porque puede haber cambios de signo ahí). A continuación, se calcula el signo de $f'(x)$ en todos los tramos intermedios. De esta forma, se puede determinar los intervalos donde $f(x)$ es creciente y decreciente.
+\par Al análisis del crecimiento y decrecimiento también se le llama \emph{Monotonía}.
+
+\subsection{Máximos y mínimos}
+Con el estudio anterior, es muy sencillo determinar si los extremos relativos calculados son máximos o mínimos, dependiendo de si la función es antes creciente y después decreciente, o al revés: antes decreciente y después creciente.
+\par Hay otra forma matemática de determinar si ciertos extremos son máximos o mínimos, evaluando el valor de $f''(x)$ en los valores de $x$ de los extremos relativos. Si:
+\begin{itemize}
+	\item $f''(x_0) < 0$ $\to$ $x_0$ es un máximo relativo.
+	\item $f''(x_0) > 0$ $\to$ $x_0$ es un mínimo relativo.
+\end{itemize}
+
+\begin{examplebox}
+	\subsection*{Analice la siguiente función:}
+	\[f(x) = \frac{x^{2} + x - 2}{x^{2} - 2 x - 3}\]
+	Atendiendo a:
+	\begin{enumerate}
+		\item Dominio de la función
+		\vspace{-0.5em}
+		\item Puntos de corte con los ejes
+		\vspace{-0.5em}
+		\item Continuidad
+		\vspace{-0.5em}
+		\item Asíntotas (verticales y en el infinito)
+		\vspace{-0.5em}
+		\item Puntos críticos (extremos relativos)
+		\vspace{-0.5em}
+		\item Intervalos de crecimiento y decrecimiento
+		\vspace{-0.5em}
+		\item Máximos y mínimos
+		\vspace{-0.5em}
+		\item Concavidad
+	\end{enumerate}
+
+	\subsubsection*{Dominio}
+	Los puntos donde se anule el denominador, estarán fuera del dominio. Para ello, resolveremos la ecuación: \(x^{2} - 2 x - 3 = 0\).
+	\[x^{2} - 2 x - 3 = 0 \quad \to \quad (x + 1)(x - 3) = 0; \quad \to \quad x_1 = -1;\ x_2 = 3\]
+	Entonces, debemos excluir los puntos $x_1$ y $x_2$, de forma que el dominio quedará:
+	\[D(f) = \mathbb{R} - \{-1, 3\}\]
+	O alternativamente:
+	\[D(f) = (-\infty, -1)\cup(-1, 3)\cup(3, +\infty)\]
+
+	\subsubsection*{Puntos de corte con los ejes}
+	Como se ha indicado, los puntos de corte con el eje $X$ se obtienen resolviendo $f(x) = 0$:
+	\[\frac{x^{2} + x - 2}{x^{2} - 2 x - 3} = 0 \quad \Longrightarrow \quad x^{2} + x - 2 = 0\]
+	De donde se obtiene
+	\[x^{2} + x - 2 = 0 \quad \Longrightarrow \quad (x-1)(x+2) = 0\]
+	Entonces tenemos que los puntos $x_3 = -2$ y $x_4 = 1$ son donde se anula el numerador, y donde la función corta al eje $X$.
+	\par El punto de corte con el eje $Y$ se obtiene evaluando $f(0)$:
+	\[f(0) = \frac{-2}{-3} = \frac{2}{3} = 0.666\dots\]
+	Entonces tenemos los puntos de corte con el eje $X$: (0, -2) y (0, 1)\\
+	Y el punto de corte con el eje $Y$: ($\frac{2}{3}$, 0)
+
+	\subsubsection*{Continuidad}
+	Debemos comprobar la continuidad en los puntos que hemos excluido del dominio (es decir, en $= -1$ y en $x = 3$). Como se anula el denominador, ya sabemos que no existe la función en estos puntos, pero el proceso completo tiene la siguiente pinta:
+	\begin{enumerate}
+		\item Continuidad en $x = -1$
+			\par \(\nexists f(-1) \to \) $f(x)$ es discontinua en $x = -1$.
+			\par \(\dlim_{x \to -1^-} f(x) = \left(\frac{(-1^-)^2 + (-1^-) -2}{(-1^-)^2 - 2(-1^-) - 3}\right) = \left(\frac{1^+ - 1^- - 2}{1^+ + 2\cdot1^+ -3}\right) = \left(\frac{-1}{0^+}\right)\)
+		\item Continuidad en $x = 3$
+			\par \(\nexists f(3) \to \) $f(x)$ es discontinua en $x = 3$.
+	\end{enumerate}
+
+\end{examplebox}
 \newpage
 \listoftodos
 \end{document}
