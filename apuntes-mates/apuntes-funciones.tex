@@ -16,7 +16,7 @@ Estos apuntes no están aprobados por ningún editor o han sido revisados por pe
 \par Estos apuntes están pensados para ser utilizados \emph{de forma complementaria} a las clases, no sustituirlas. Aunque intentan abordar los conceptos desde el principio, se asume que el lector cuenta con una clase donde se explica todo con más detalle y un profesor al que le puede plantear dudas.
 
 \subsection*{Erratas y errores matemáticos}
-Como se indica, estos apuntes no han sido revisados por un editor ni pedagogo, mucho menos un matemático. Puede haber erratas en el texto, y lo que es peor, errores en los ejemplos. Si un estudiante se topara con una errata al utilizar estos apuntes, \href{https://github.com/Ohmyus/clases-particulares/issues/new}{puede indicarlo como un problema}. De esta forma, los apuntes serán corregidos y habrá una nueva edición que será más util a futuros compañeros.
+Como se indica, estos apuntes no han sido revisados por un editor ni pedagogo, mucho menos un matemático. Puede haber erratas en el texto, y lo que es peor, errores en los ejemplos. Si un estudiante se topara con una errata al utilizar estos apuntes, \href{https://github.com/Ohmyus/clases-particulares/issues/new}{puede indicarlo como un problema}. De esta forma, los apuntes serán corregidos y habrá una nueva edición que será más útil a futuros compañeros.
 
 \subsection*{Ejercicios para el lector}
 Durante estos apuntes hay varios ejercicios para el lector, donde se proporciona la solución pero no el desarrollo. Es muy importante hacerlos, para asegurar que se han entendido los conceptos. El aprendizaje a este nivel no solamente tiene que ser leer la teoría y los ejercicios, sino que se demuestra que los conceptos se han aprendido \emph{haciendo los ejercicios}.
@@ -78,7 +78,7 @@ La inmensa mayoría de las funciones elementales son funciones reales. La forma 
 \label{sec:dominio-recorrido}
 El dominio y el recorrido de una función son conjuntos. Como estamos trabajando con \textbf{funciones reales}, serán conjuntos de números reales.
 \subsection{Dominio de una función}
-Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluiddos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio.
+Se define como el conjunto de todos los posibles valores $x$ que pueden ser el argumento de entrada de una función. Para calcularlo, en primer lugar deberemos deducir a partir de la función qué operaciones pueden ser problemáticas para algunos valores de $x$, y estos quedarán excluidos del dominio. En segundo lugar, deberemos mirar si en la propia definición de la función ya se está limitando este dominio.
 
 \subsubsection{Dominio de funciones definidas a trozos}
 Este es un caso más particular, donde lo que ocurre es que se debe comprobar el dominio de cada una de las definiciones de la función. Una vez hecho esto, si hay restricciones al dominio de alguna de las definiciones de la función definida a trozos, entonces estas solamente se aplicarán si caen dentro del intervalo donde esa definición aplica.
@@ -111,7 +111,7 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 			\[D(g) = (-\infty, -1] \cup [1, \infty)\]
 
 	\subsubsection*{3.}
-	En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podeos escribir:
+	En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podemos escribir:
 	\[D(h) = [-1, 1]\]
 
 	\subsubsection*{4.}
@@ -156,7 +156,7 @@ Otra forma de escribir funciones más complejas es tomar definiciones de funcion
 \par \(f(x) = \ln(x)\;\;\;\;\;g(x) = x^2 - 1\)
 \par Se puede definir entonces \(h(x) = (g \circ f) (x)\), que se lee como $f$ compuesto con $g$, e indica la expresión de $g(f(x))$. Entonces, esta nueva función sería:
 \[g(f(x)) = f(x)^2 - 1 = {\ln(x)}^2 - 1\]
-Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $g(x)$, y allá donde iría $x$, se escribie $f$ en su lugar.
+Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $g(x)$, y allá donde iría $x$, se escribe $f$ en su lugar.
 
 \section{Límites de una Función}
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
@@ -179,7 +179,6 @@ Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe 
 				xlabel=$x$, ylabel=$f(x)$,
 				thick
 			]
-			%\addplot[black, dashed] coordinates {(1,-0.5) (1,0)};
 			\addplot[black, dashed] coordinates {(1.05,-0.5) (1.05,0.1025)};
 			\addplot[black, dashed] coordinates {(0.95,-0.5) (0.95,-0.0975)};
 			\addplot[blue, dashed] coordinates {(0.5,0.1025) (1.05,0.1025)};
@@ -473,7 +472,7 @@ Esto quiere decir que cuando $x$ se aproxima mucho a $a$, el valor de la funció
 Este tipo de asíntotas se dan \emph{cuando x tiende a $\pm \infty$}. Son asíntotas que tienen asociada una representación de la forma $y = A$, donde $A$ es el valor al que la función se aproxima. Matemáticamente, se definen así:
 \[\dlim_{x\to \pm \infty} f(x) = A\]
 Esto quiere decir que para valores muy grandes (en valor absoluto) de $x$, la función no crece de forma descontrolada, sino que se aproxima cada vez más a un valor muy concreto, que hemos llamado $A$ en nuestra definición.
-\par Este tipo de asíntotas suelen aparecer cuando en la función hay un cociente en el que el denominador crece mucho más rapido que el numerador. Si se encuentra una función donde esto se cumple, es una perfecta candidata a presentar asíntotas horizontales.
+\par Este tipo de asíntotas suelen aparecer cuando en la función hay un cociente en el que el denominador crece mucho más rápido que el numerador. Si se encuentra una función donde esto se cumple, es una perfecta candidata a presentar asíntotas horizontales.
 
 \subsection{Asíntotas Oblicuas}
 \label{sec:oblicuas}
@@ -530,11 +529,11 @@ Aquí es donde utilizaremos los límites que hemos calculado en el apartado de c
 
 \subsubsection{Asíntotas verticales}
 Al haber estudiado la continuidad en los puntos que están fuera del dominio, se habrá calculado ya los límites laterales alrededor de estos puntos, se sabrá si hay o no asíntotas verticales. Una vez encontradas y estudiadas, se puede escribir el estudio de las asíntotas verticales que presenta la función de la siguiente manera:
-\par $f(x)$ presenta asíntoas verticales en $x = a$, $x = b$\dots, donde $a, b$ son los valores de $x$ donde hay asíntotas verticales.
+\par $f(x)$ presenta asíntotas verticales en $x = a$, $x = b$\dots, donde $a, b$ son los valores de $x$ donde hay asíntotas verticales.
 
 \subsubsection{Asíntotas horizontales}
 Si la función es un cociente de polinomios donde el denominador tiene un grado \textbf{igual o mayor} que el del numerador, se debe sospechar que presentará asíntotas horizontales. Para confirmarlo, se calculan los límites de $f(x)$ en $\pm \infty$.
-\par Si la funcion presenta asíntotas horizontales, se indicará de la siguiente forma:
+\par Si la función presenta asíntotas horizontales, se indicará de la siguiente forma:
 \par $f(x)$ presenta una asíntota horizontal en $\pm\infty$ de la forma $y = A$.
 
 \subsubsection{Asíntotas oblicuas}
