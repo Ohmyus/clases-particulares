@@ -88,7 +88,7 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 \begin{examplebox}
 	\subsection*{Ejemplos de cálculo de Dominio y Recorrido}
 	\subsubsection*{Calcula el dominio de las siguientes funciones:}
-	\begin{enumerate}
+	\begin{enumerate}[label=\bfseries \arabic*)]
 		\item $f(x) = \ln(x)$
 		\item $g(x) = \sqrt{x^2 - 1}$
 		\item $h(x) = \arcsen(x)$
@@ -96,24 +96,24 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 		\item $k(x) = \dfrac{\ln(x + 3)}{x^2 + x - 2}$ Ejercicio para el lector. $D(k) = (-3, \infty) - \{-2, 1\}$
 	\end{enumerate}
 	De forma general, el dominio de una función $f$, lo escribiremos como $D(f)$. La solución a esto \textbf{siempre será un conjunto de valores}, que podemos escribir como un intervalo (eso de utilizar corchetes y paréntesis $\to$ [-1, 3) ), o una unión de intervalos, o un conjunto excluyendo algunos valores. La forma de determinar qué conjunto es el dominio, es \emph{buscar cuándo no se puede calcular la función}. En el caso de divisiones, cuándo se divide por 0, o en el caso de raíces cuadradas, cuándo el radicando (lo que hay dentro de la raíz) es negativo.
-			\subsubsection*{1.}
-			En este caso, $f(x) = \ln(x)$. Recordando un poco la definición del logaritmo neperiano, sabremos que no está definido para números negativos o 0, es decir, que lo que haya dentro del logaritmo tiene que ser siempre positivo. Con esto, podemos escribir una inecuación:
-			\[ x > 0\]
-			Esto nos quiere decir que para que exista $f(x)$, es necesario que $x > 0$. Esta es la condición para el dominio. Entonces, podemos escribir:
-			\[D(f) = (0, \infty) \]
+	\subsubsection*{1)}
+	En este caso, $f(x) = \ln(x)$. Recordando un poco la definición del logaritmo neperiano, sabremos que no está definido para números negativos o 0, es decir, que lo que haya dentro del logaritmo tiene que ser siempre positivo. Con esto, podemos escribir una inecuación:
+	\[ x > 0\]
+	Esto nos quiere decir que para que exista $f(x)$, es necesario que $x > 0$. Esta es la condición para el dominio. Entonces, podemos escribir:
+	\[D(f) = (0, \infty) \]
 
-			\subsubsection*{2.}
-			Ahora tenemos que $g(x) = \sqrt{x^2 - 1}$ Como se ha mencionado antes, todo lo que haya dentro de una raíz debe ser mayor o igual que 0. Entonces, para encontrar el dominio, deberemos imponer esta condición, y operando ligeramente:
-			\[ x^2 - 1 \geq 0\]
-			\[(x + 1)(x - 1)\geq 0\]
-			A partir de aquí, para que el producto de ambos factores sea positivo, o bien ambos son positivos \textbf{a la vez} o ambos son negativos \textbf{a la vez}. Esto nos permite dividir la recta real\footnote{Este ejercicio se deja para el lector} en dos tramos válidos para valores de $x$: $(-\infty, -1]$, y $[1, \infty)$, es decir, que $g(x)$ existirá si $x \in (-\infty, -1] \cup [1, \infty)$. Es por esto precisamente que podemos escribir:
-			\[D(g) = (-\infty, -1] \cup [1, \infty)\]
+	\subsubsection*{2)}
+	Ahora tenemos que $g(x) = \sqrt{x^2 - 1}$ Como se ha mencionado antes, todo lo que haya dentro de una raíz debe ser mayor o igual que 0. Entonces, para encontrar el dominio, deberemos imponer esta condición, y operando ligeramente:
+	\[ x^2 - 1 \geq 0\]
+	\[(x + 1)(x - 1)\geq 0\]
+	A partir de aquí, para que el producto de ambos factores sea positivo, o bien ambos son positivos \textbf{a la vez} o ambos son negativos \textbf{a la vez}. Esto nos permite dividir la recta real\footnote{Este ejercicio se deja para el lector} en dos tramos válidos para valores de $x$: $(-\infty, -1]$, y $[1, \infty)$, es decir, que $g(x)$ existirá si $x \in (-\infty, -1] \cup [1, \infty)$. Es por esto precisamente que podemos escribir:
+	\[D(g) = (-\infty, -1] \cup [1, \infty)\]
 
-	\subsubsection*{3.}
+	\subsubsection*{3)}
 	En este caso, $h(x) = \arcsen(x)$. Si recordamos la definición de $\arcsen(x)$, este plantea la pregunta ¿Qué ángulo tiene un seno $x$? Esto quiere decir que los valores de $x$ deben ser los valores que puede tomar el seno, comprendidos entre -1 y 1. Entonces, $\arcsen(x)$ solo estará definido para $-1 \leq x \leq 1$. Esto de nuevo nos define un intervalo, y podemos escribir:
 	\[D(h) = [-1, 1]\]
 
-	\subsubsection*{4.}
+	\subsubsection*{4)}
 	En este caso, $j(x) =\frac{x - 3}{x^2 - 4}$. Debería resultar evidente que no se puede dividir entre 0, por lo que el dominio de $j(x)$ será todos los posibles valores de $x \in (-\infty, \infty)$ quitando aquellos que hagan que $x^2 - 4 = 0$. Resolviendo esta ecuación:
 	\[x^2 - 4 = 0\]
 	\[x^2 = 4\]
@@ -131,11 +131,11 @@ También conocido como imagen, el recorrido de una función es el conjunto de to
 	\end{enumerate}
 	Ahora, se pide otro conjunto de valores. Esta vez, no se trata de todos los posibles valores que puede tomar $x$ para que las funciones estén definidas, sino todos los valores que pueden tomar las funciones $f$ y $g$, para cualquier valor de $x$ que esté en su dominio. El recorrido de una función $f(x)$ lo escribiremos como $R(f)$.
 
-	\subsubsection*{1.}
+	\subsubsection*{1)}
 	Para el caso de $f(x) = x^2 + 1$, sabemos que todos los posibles valores de $x^2$ son positivos o 0. Entonces, al sumar 1, todos los valores de $f(x)$ serán o 1 ($x = 0$) o mayores que 1 ($x \neq 0$), así que finalmente:
 	\[ R(f) = [1, \infty) \]
 
-	\subsubsection*{2.}
+	\subsubsection*{2)}
 	Para el caso de $g(x) = \sqrt{x}$, sabemos que serán siempre valores positivos. Conviene recordar que el operador $\sqrt{a}$ no es lo mismo que las soluciones de $x^2 = a$. Entonces, como todo lo que sale de $\sqrt{\ }$ es positivo:
 	\[ R(g) = [0, \infty) \]
 \end{examplebox}
@@ -159,7 +159,9 @@ Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $
 
 \section{Límites de una Función}
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
+\par Se dice que el límite de una función en un punto (o en el infinito) es el valor que mejor representa el comportamiento ``local'' de la función en ese punto. El comportamiento loca, es otra forma de referirse a la idea de `lo que parece que la función está haciendo'.
 \par Es posible que el concepto de límite ya se haya introducido. Sin embargo, es muy importante dominar esto, tanto a nivel conceptual como operativo.
+
 \subsection{Definición formal de límite:}
 Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe como $\dlim_{x \to a} f(x)$), si para cualquier número \emph{arbitrariamente} pequeño $\varepsilon > 0$ se puede encontrar otro número $\delta > 0$ que cumpla que: $\left|f(a + \delta) - f(a - \delta)\right| < \varepsilon$. Una vez que se cumple esta condición, manteniendo que $\varepsilon$ es un número pequeño, podemos decir que $l$ es el límite de $f(x)$ cuando $x$ tiende a $a$ ($x \to a$) si: $\left|l - f(a - \delta)\right| < \varepsilon$.
 \par Todo esto se escribe así:
@@ -199,7 +201,7 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
 	\subsection*{Ejemplos gráficos de límites}
 	\subsubsection*{Discuta e indique razonadamente la existencia de los siguientes límites:}
 	\begin{minipage}[b]{0.45\linewidth}
-		\begin{enumerate}[label=\arabic*., series=mylist]
+		\begin{enumerate}[label=\bfseries \arabic*), series=mylist]
 			\item \(\dlim_{x\to\frac{1}{2}} f(x)\) %\dlim es un comando nuevo de apuntes.cls que se encarga de que los límites están bien puestos
 			\item \(\dlim_{x \to 0} f(x)\)
 			\item $\dlim_{x \to 0} g(x)$
@@ -207,7 +209,7 @@ Lo que estamos es buscando un $\delta$ para conseguir que la diferencia entre la
 		\end{enumerate}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
-		\begin{enumerate}[resume=mylist]
+		\begin{enumerate}[label=\bfseries \arabic*), resume=mylist]
 			\item \(\dlim_{x \to 2} h(x)\)
 			\item $\dlim_{x \to 0} h(x)$
 			\item \(\dlim_{x \to 0} j(x)\)
@@ -312,7 +314,7 @@ También puede resultar de mucho interés observar cómo es el comportamiento de
 \[ l = \lim_{x \to \infty} f(x)\]
 Sin embargo, este límite no tiene por qué estar determinado, de hecho, en la mayoría de funciones no lo está. Solamente en funciones que presentan asíntotas horizontales, estos límites existen. En el resto de casos, este límite siempre toma valores de $\pm \infty$, por lo que no está definido.
 \par La definición formal del límite de una función en el infinito es:
-\[\forall \varepsilon > 0,\; \exists \; \delta > 0\;\mid\;\left| f(x > \delta) - l\right| < \epsilon\]
+\[\forall \varepsilon > 0,\; \exists \; \delta > 0\;\mid\;\left| f(x > \delta) - l\right| < \varepsilon\]
 Donde $l = \dlim_{x \to \infty}{f(x)}$. Esto quiere decir, que existe un valor de $\delta$ para cada valor de $\varepsilon$ que se nos ocurra, que garantizará que la diferencia entre $f(x)$ y el valor $l$ será menor que el propio $\varepsilon$, siempre que $x > \delta$.
 
 \begin{figure}[ht]
@@ -334,33 +336,75 @@ Donde $l = \dlim_{x \to \infty}{f(x)}$. Esto quiere decir, que existe un valor d
 
 \subsection{Cálculo de los límites de una función}
 Para calcular el valor del límite de una función, cuando $x$ tiende a un valor, se comienza por sustituir el valor de $x$ en la función.
-\par \todo{Ejemplos de cálculo de límites sin indeterminaciones}
 \par Sin embargo, se pueden dar casos en los que simplemente sustituir el valor lleve a resultados que no tienen sentido analíticamente, pero los límites sí que existen. Esto ocurre porque al sustituir el valor, estamos asumiendo que el límite coincide con el valor de la función. Si no hay indeterminaciones, esto es correcto, pero si las hay, el procedimiento es más complejo.
 
+\begin{examplebox}
+	\subsection*{Resuelve los siguientes límites:}
+	\begin{enumerate}[label=\bfseries\arabic*)]
+		\item \(\dlim_{x \to 1} \frac{x^2 - 2x + 1}{x + 1}\) \quad \quad Solución: $(0)$
+		\item \(\dlim_{x \to 0} e^{-x^2}\) \quad \quad \quad \quad \;\ \quad Solución: $(1)$
+		\item \(\dlim_{x \to 2} \ln{\left(\frac{x + 2}{4 - x}\right)}\) \quad \quad \ Solución: $(\ln(2))$
+		\item \(\dlim_{x \to -1} x^3 + 2x + 1\) \quad \; Solución: $(-2)$
+	\end{enumerate}
+\end{examplebox}
+
 \subsection{Tipos de indeterminaciones}
+En el caso de que al resolver el límite aparezca una expresión que no parece tener sentido, muy probablemente se haya llegado a una indeterminación.
+\par Las indeterminaciones son, entonces, expresiones en el cálculo de límites, que no tienen una solución única para todos los casos, sino que se deben analizar una a una. Por ejemplo el siguiente límite presenta la indeterminación $\frac{\infty}{\infty}$, y su resultado es $1$:
+\[\dlim_{x \to \infty}\frac{x}{x - 1} \quad \Longrightarrow \quad \left(\frac{\infty}{\infty}\right)\]
+Mientras que el siguiente límite presenta la misma indeterminación, y su resultado es $\infty$:
+\[\dlim_{x \to \infty} \frac{x^2 - 1}{x + 1} \quad \Longrightarrow \quad \left(\frac{\infty}{\infty}\right)\]
+
+A continuación se enumeran todos los tipos de indeterminaciones que se explicarán en las secciones siguientes:
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{clclclcl}
+		1. & \(\left(\frac{k}{0}\right)\) & 2. & \(\left(\frac{0}{0}\right)\)\quad & 3. & \(\left(\frac{\infty}{\infty}\right)\) & 4. & \(\infty - \infty\) \\
+		5. & \(0 \cdot \infty\) \quad & 6. & \(1^\infty\) & 7. & \(0^0\) & 8. & \(\infty^0\) \\
+	\end{tabular}
+\end{table}
+
+\subsubsection{Indeterminación \emph{k}/0}\label{sec:lims-laterales}
+Esta indeterminación se puede resolver tomando los límites laterales. Generalmente, una de estas indeterminaciones implica que el límite tiende a infinito, pero hay ambigüedad en el signo. Por ello, al tomar los límites laterales, se puede determinar si el límite existe (ambos infinitos tienen el mismo signo) o si el límite no existe (no coinciden los signos). Para calcular los límites laterales, la mejor forma es utilizar la calculadora:
+\par A continuación se presenta el ejemplo de los límites laterales $x \to -1^-$ y $x \to -1^+$ de la expresión \(\frac{x^2 + x - 2}{x^2 - 2x -3}\)
 \begin{enumerate}
-	\item \(\left(\frac{k}{0}\right)\)
-	\item \(\left(\frac{0}{0}\right)\)
-	\item \(\left(\frac{\infty}{\infty}\right)\)
-	\item \(\infty - \infty\)
-	\item \(0 \cdot \infty\)
-	\item \(1^\infty\)
-	\item \(0^0\)
-	\item \(\infty^0\)
+	\item Escribir en la calculadora la expresión matemática, utilizando \texttt{X}:
+		\par \texttt{(X\textasciicircum 2 + X - 2)\textdiv{}(X\textasciicircum 2 - 2\texttimes{}X - 3)}
+	\item Pulsar \texttt{=} o \texttt{EXE}, dependiendo de la calculadora, aunque no sepamos qué valor de \texttt{X} está asignado. De esta forma, se guarda la expresión en la memoria.
+	\item Asignar a \texttt{X} un valor parecido a $-1^-$ (en este caso), como \texttt{-1.001}.
+	\item Navegar de vuelta a la expresión de $f(x)$ con las flechas, y volver a pulsar \texttt{=} o \texttt{EXE}, dependiendo de la calculadora.
+	\item Aparecerá un número grande, pero lo que importa es el signo, positivo o negativo. Este será el signo del $\infty$ al que tiende el límite.
+	\item Asignar a \texttt{X} el un valor muy parecido a $-1^+$, como \texttt{-0.999}, y repetir los pasos 4. y 5. para evaluar el caso de $x \to -1^+$.
 \end{enumerate}
 
-\subsubsection{Indeterminación \emph{k}/0}
-Esta indeterminación se puede resolver tomando los límites laterales. Generalmente, una de estas indeterminaciones implica que el límite tiende a infinito, pero hay ambigüedad en el signo. Por ello, al tomar los límites laterales, se puede determinar si el límite existe (ambos infinitos tienen el mismo signo) o si el límite no existe (no coinciden los signos).
-\todo{Ejemplo indeterminación k/0}
+\begin{examplebox}
+	\textbf{Ejemplo:}
+	\par \(\dlim_{x \to 1}\frac{x + 3}{x^2 + x -2} = \left(\frac40\right)\)
+	\[
+		\renewcommand{\arraystretch}{1.7}
+		\dlim_{x \to 1}\frac{x + 3}{x^2 + x -2}\Rightarrow\left\{\begin{array}{l}
+		\dlim_{x \to 1^-}\frac{x + 3}{x^2 + x -2} = +\infty \\
+		\dlim_{x \to 1^+}\frac{x + 3}{x^2 + x -2} = -\infty \\
+\end{array}\right\} \Rightarrow \nexists \lim\]
+\end{examplebox}
 
 \subsubsection{Indeterminación 0/0}
 Esta indeterminación se puede dar en dos casos distintos:
 \begin{itemize}
-	\item Cuando $x \to a$, ó:
+	\item Cuando $x \to a$ (un valor finito), ó:
 	\item Cuando $x \to \infty$ (mucho menos frecuente)
 \end{itemize}
 En el caso de que se de cuando $x \to a$, la forma de evitar esta indeterminación es factorizando las funciones del numerador y del denominador. Si el numerador y/o el denominador no son polinomios, entonces el procedimiento es hacer un desarrollo en serie (eso son matemáticas por encima del nivel de bachillerato) alrededor de $a$ para poder factorizar.
 \par En el caso de que se de cuando $x \to \infty$, se resuelve atendiendo a los órdenes de las funciones, es decir, viendo qué función tiende a 0 más rápido. \todo{Explicar órdenes de convergencia al 0}
+
+\begin{examplebox}
+	\textbf{Ejemplo:}
+	\par \(\dlim_{x\to 2}\frac{x^2 - 4}{x - 2} = \left(\frac{0}{0}\right)\)
+	\par En este caso, como es un cociente de polinomios con $x$ tendiendo a un valor finito, se factoriza y elimina el factor común:
+	\[\dlim_{x \to 2}\frac{x^2 - 4}{x - 2} = \dlim_{x \to 2}\frac{(x + 2)\cancel{(x - 2)}}{\cancel{x - 2}} = \dlim_{x \to 2} x + 2 = 4\]
+
+	Para expresiones más complicadas, la dificultad está en la factorización, no en la resolución del límite.
+\end{examplebox}
 \par \todo{Ejemplo indeterminación 0/0}
 
 \subsubsection{Indeterminación \texorpdfstring{$\left(\dfrac{\infty}{\infty}\right)$}{(∞/∞)}}
@@ -488,6 +532,31 @@ Sin embargo, existe una forma más rápida de calcular las asíntotas de una fun
 \\\todo{Demostración del método ``rápido'' para calcular asíntotas oblicuas}
 \par \todo{Ejemplos de asíntotas}
 
+\section{Función derivada}
+La \underline{derivada de una función en un punto} es el valor de la \emph{pendiente de la recta tangente} a la función en ese punto. Esto quiere decir, que la derivada de una función da información del comportamiento local de la función en ese punto.
+\par La definición matemática de la derivada de una función en un punto es la siguiente:
+\[f'(a) = \dlim_{h \to 0}\frac{f(a + h) - f(a)}{h}\]
+Visualmente lo podemos entender como calcular la pendiente de la recta que pasa por los puntos $(a, f(a))$ y $(a+h, f(a+h))$, e ir reduciendo poco a poco el valor de $h$, como se presenta en la \autoref{fig:derivative-explanation}.
+
+\begin{figure}[!ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.65\linewidth, height=5cm,
+				xmin=0, xmax=1.9,
+				ymin=-0.5, ymax=0.5,
+				axis lines = left,
+				xlabel=$x$, ylabel=$f(x)$,
+				thick,
+				clip=false
+			]
+			\draw[dashed] (0.4, -0.5) -- (0.4, 0.336) node[pos=0, below] {$x = a$};
+			\addplot[color=red,domain=0:1.2,samples=30,ultra thick]{-x^3+x};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Representación gráfica de la definición de límite}
+	\label{fig:derivative-explanation}
+\end{figure}
+
 \section{Análisis de Funciones}
 El análisis de funciones comienza tomando la expresión analítica de una función, y a partir de esto se extrae toda la información posible de la función. Para hacer un análisis completo, se considerarán todos los siguientes aspectos:
 
@@ -572,7 +641,7 @@ Para representar la función se utilizará toda la información que se ha obteni
 	\subsection*{Analice la siguiente función:}
 	\[f(x) = \frac{x^{2} + x - 2}{x^{2} - 2 x - 3}\]
 	Atendiendo a:
-	\begin{enumerate}
+	\begin{enumerate}[label=\bfseries\arabic*)]
 		\item Dominio de la función
 		\vspace{-0.5em}
 		\item Puntos de corte con los ejes
@@ -624,17 +693,7 @@ Para representar la función se utilizará toda la información que se ha obteni
 			\par \(\nexists \dlim_{x \to 3} f(x)\)
 	\end{enumerate}
 
-	Para calcular los límites laterales, en este ejemplo se utiliza la notación de $3^-$ y $3^+$, indicando `3 por la derecha' y `3 por la izquierda' respectivamente. En la práctica, la forma más rápida de resolver los límites así es utilizando la calculadora:
-	\begin{enumerate}
-		\item Escribir en la calculadora la expresión matemática, utilizando \texttt{X}:
-		\par \texttt{(X\textasciicircum 2 + X - 2)/(X\textasciicircum 2 - 2\texttimes{}X - 3)}
-		\item Pulsar \texttt{=} o \texttt{EXE}, dependiendo de la calculadora, aunque no sepamos qué valor de \texttt{X} está asignado. De esta forma, se guarda la expresión en la memoria.
-		\item Asignar a \texttt{X} un valor parecido a $-1^-$ (en este caso), como \texttt{-1.001}.
-		\item Navegar de vuelta a la expresión de $f(x)$ con las flechas, y volver a pulsar \texttt{=} o \texttt{EXE}, dependiendo de la calculadora.
-		\item Aparecerá un número grande, pero lo que importa es el signo, positivo o negativo. Este será el signo del $\infty$ al que tiende el límite.
-		\item Asignar a \texttt{X} el un valor muy parecido a $-1^+$, como \texttt{-0.999}, y repetir los pasos 4. y 5. para evaluar el caso de $x \to -1^+$.
-		\item Repetir para el caso de $x \to 3^+$ y $x \to 3^-$.
-	\end{enumerate}
+	Para calcular los límites laterales, en este ejemplo se utiliza la notación de $3^-$ y $3^+$, indicando `3 por la derecha' y `3 por la izquierda' respectivamente. En la práctica, la forma más rápida de resolver los límites así es utilizando la calculadora (ver \autoref{sec:lims-laterales})
 
 	\subsubsection*{Asíntotas}
 	Ya hemos encontrado las asíntotas verticales de $f(x)$, son los puntos $x = -1$ y $x = 3$, así que solamente hay que indicarlo:
