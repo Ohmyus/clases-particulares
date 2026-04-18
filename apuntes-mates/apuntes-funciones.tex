@@ -1,5 +1,4 @@
-%! TEX root apuntes-funciones.tex
-\documentclass{apuntes} %Esta es una clase de documento nueva basada en la clase básica article, que carga muchos paquetes para poder pintar tablas, cargar figuras, ajustar la disposición de la página, etc. Escrito por mí
+\documentclass[sans]{apuntes}
 
 \usepackage{siunitx}
 
@@ -167,7 +166,7 @@ Se dice que existe el límite de $f(x)$ cuando $x$ tiende a $a$ (que se escribe 
 \[\lim_{x\to a}f(x) = l\]
 \par Esta definición es algo engorrosa y difícil de ver, pero permite entender con el máximo rigor matemático qué es un límite y para qué sirve. A continuación se explica con más detalle.
 \par Imaginemos una función, por ejemplo $f(x) = x^2 - 1$. Veremos cómo es el límite cuando $f(x)$ tiende a 1. Tomando la definición de límite, necesitamos asegurar que para cualquier número $\varepsilon$ arbitrariamente pequeño, podemos encontrar otro número $\delta$ que cumpla una condición.
-\par Esta condición consiste en que para cualquier $\varepsilon$ positivo pero arbitrariamente pequeño, el valor de $\left|f(1 + \delta) - f(1 - \delta)\right|$ debe ser menor que $\varepsilon$, eso sí, con un valor de $\delta$ positivo y mayor que 0. La mejor forma de entender esta restricción es fijarse en la \autoref{fig:limit-definition}:
+\par Esta condición consiste en que para cualquier $\varepsilon$ positivo pero arbitrariamente pequeño, el valor de la diferencia $\left|f(1 + \delta) - f(1 - \delta)\right|$ debe ser menor que $\varepsilon$, eso sí, con un valor de $\delta$ positivo y mayor que 0. La mejor forma de entender esta restricción es fijarse en la \autoref{fig:limit-definition}.
 
 \begin{figure}[ht]
 	\centering
