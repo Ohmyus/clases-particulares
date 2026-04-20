@@ -157,6 +157,120 @@ Otra forma de escribir funciones más complejas es tomar definiciones de funcion
 \[g(f(x)) = f(x)^2 - 1 = {\ln(x)}^2 - 1\]
 Es importante observar que la forma de escribir $g(f(x))$ consiste en escribir $g(x)$, y allá donde iría $x$, se escribe $f$ en su lugar.
 
+\section{Funciones Elementales}
+Estas funciones son los bloques más básicos, que se podrán utilizar mediante las operaciones con funciones o la composición para construir funciones más complejas. Hay varios tipos de funciones elementales:
+
+\subsection{Funciones polinómicas}
+Las funciones polinómicas son funciones del estilo:
+\[f(x) = p(x), \quad \text{donde}\ p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\]
+Su dominio es todo $\mathbb{R}$, y son continuas en todo su dominio, sin presentar asíntotas salvo para el caso de $n = 1$ (funciones lineales).
+\par En función del grado de $p(x)$, el valor de $n$, que debe de ser un número entero, \emph{puede haber} hasta $n$ puntos de corte con el eje $X$.
+
+\begin{examplebox}
+	\subsubsection{Ejemplos de funciones polinómicas}
+		\begin{minipage}{0.45\linewidth}
+		\captionsetup{type=figure}
+		\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=\linewidth,
+					ticks=none,
+					thick,
+					xmin= -3, xmax=3,
+					ymin= -3, ymax=3,
+					axis lines = center,
+					xlabel = $x$,
+					ylabel = $f(x)$,
+					]
+					\addplot[red, ultra thick, domain=-3:3, samples=100]{-x^2 - x + 1};
+				\end{axis}
+			\end{tikzpicture}
+			\captionof{figure}{Representación de $f(x) = -x^2 - x +1$}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+		\captionsetup{type=figure}
+		\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=\linewidth,
+					ticks=none,
+					thick,
+					xmin= -3, xmax=3,
+					ymin= -3, ymax=3,
+					axis lines = center,
+					xlabel = $x$,
+					ylabel = $f(x)$,
+					]
+					\addplot[red, ultra thick, domain=-3:3, samples=100]{x^4 - 2*x^2 - 1};
+				\end{axis}
+			\end{tikzpicture}
+			\captionof{figure}{Representación de $f(x) = x^4 - 2x^2 - 1$}
+		\end{minipage}
+\end{examplebox}
+
+\subsection{Funciones racionales}
+Las funciones racionales consisten en el cociente de dos polinomios. Son de la forma:
+\[f(x) = \frac{p(x)}{q(x)}\]
+Donde $p(x)$ y $q(x)$ son polinomios, o funciones polinómicas. Su dominio es todo $\mathbb{R}$, \textbf{excepto} los valores de $x$ que hacen que $q(x) = 0$. Por esto, pueden presentar discontinuidades y asíntotas, que más adelante se explica cómo encontrar y calcular.
+\par En función del grado de $p(x)$, \emph{puede haber} hasta $n$ puntos de corte con el eje $X$.
+\par \todo{ejemplos de funciones racionales}
+
+\begin{examplebox}
+	\subsubsection{Ejemplos de funciones radicales}
+		\begin{minipage}{0.45\linewidth}
+		\captionsetup{type=figure}
+		\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=\linewidth,
+					ticks=none,
+					thick,
+					xmin= -10, xmax=10,
+					ymin= -10, ymax=10,
+					axis lines = center,
+					xlabel = $x$,
+					ylabel = $f(x)$,
+					]
+					\addplot[red, ultra thick, domain=-10:-1.11, samples=80]{(x - 2)/(x^2 + 2*x + 1)};
+					\addplot[red, ultra thick, domain=-0.9:10, samples=80]{(x - 2)/(x^2 + 2*x + 1)};
+				\end{axis}
+			\end{tikzpicture}
+			\captionof{figure}{Representación de $f(x) = \frac{x - 2}{x^2 + 2x + 1}$}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+		\captionsetup{type=figure}
+		\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=\linewidth,
+					ticks=none,
+					thick,
+					xmin= -3, xmax=3,
+					ymin= -3, ymax=3,
+					axis lines = center,
+					xlabel = $x$,
+					ylabel = $f(x)$,
+					]
+					\addplot[red, ultra thick, domain=-3:3, samples=100]{x^4 - 2*x^2 - 1};
+					\addplot[red, ultra thick, domain=-10:-1.11, samples=80]{(x - 2)/(x^2 + 2*x + 1)};
+					\addplot[red, ultra thick, domain=-0.9:10, samples=80]{(x - 2)/(x^2 + 2*x + 1)};
+				\end{axis}
+			\end{tikzpicture}
+			\captionof{figure}{Representación de $f(x) = x^4 - 2x^2 - 1$}
+		\end{minipage}
+\end{examplebox}
+
+\subsection{Funciones radicales}
+
+\subsection{Funciones logarítmicas}
+
+\subsection{Funciones exponenciales}
+
+\subsection{Funciones trigonométricas}
+\par \todo{Escribir sección de funciones elementales}
+
 \section{Límites de una Función}
 Para poder comprender conceptos más avanzados como las derivadas de una función, es esencial comprender la idea de límite de una función. Esta idea es la base del análisis de funciones y el cálculo diferencial.
 \par Se dice que el límite de una función en un punto (o en el infinito) es el valor que mejor representa el comportamiento ``local'' de la función en ese punto. El comportamiento loca, es otra forma de referirse a la idea de `lo que parece que la función está haciendo'.
@@ -395,23 +509,43 @@ Esta indeterminación se puede dar en dos casos distintos:
 	\item Cuando $x \to \infty$ (mucho menos frecuente)
 \end{itemize}
 En el caso de que se de cuando $x \to a$, la forma de evitar esta indeterminación es factorizando las funciones del numerador y del denominador. Si el numerador y/o el denominador no son polinomios, entonces el procedimiento es hacer un desarrollo en serie (eso son matemáticas por encima del nivel de bachillerato) alrededor de $a$ para poder factorizar.
-\par En el caso de que se de cuando $x \to \infty$, se resuelve atendiendo a los órdenes de las funciones, es decir, viendo qué función tiende a 0 más rápido. \todo{Explicar órdenes de convergencia al 0}
+\par En el caso de que se de cuando $x \to \infty$, se resuelve atendiendo a los órdenes de las funciones, es decir, viendo qué función tiende a 0 más rápido. Lo más cómodo suele ser convertir la indeterminación en una de tipo \(\left(\frac{\infty}{\infty}\right)\), y resolverla como tal.
 
 \begin{examplebox}
-	\textbf{Ejemplo:}
+	\textbf{Ejemplo 1:}
 	\par \(\dlim_{x\to 2}\frac{x^2 - 4}{x - 2} = \left(\frac{0}{0}\right)\)
 	\par En este caso, como es un cociente de polinomios con $x$ tendiendo a un valor finito, se factoriza y elimina el factor común:
-	\[\dlim_{x \to 2}\frac{x^2 - 4}{x - 2} = \dlim_{x \to 2}\frac{(x + 2)\cancel{(x - 2)}}{\cancel{x - 2}} = \dlim_{x \to 2} x + 2 = 4\]
+	\[\dlim_{x \to 2}\frac{x^2 - 4}{x - 2} = \dlim_{x \to 2}\frac{(x + 2)\cancelto{1}{(x - 2)}}{\cancelto{1}{(x - 2)}} = \dlim_{x \to 2} x + 2 = 4\]
 
 	Para expresiones más complicadas, la dificultad está en la factorización, no en la resolución del límite.
+
+	\vspace{2em}
+	\textbf{Ejemplo 2:}
+	\par \(\dlim_{x\to \infty}\frac{e^{-x}}{\frac{x}{x^2 - 2}} = \left(\frac{0}{0}\right)\)
+	\par En este caso, se puede `dar la vuelta' a la expresión para convertirla en la indeterminación $\infty/\infty$:
+	\[\dlim_{x\to \infty}\frac{e^{-x}}{\frac{x}{x^2 - 2}} = \dlim_{x\to \infty}\frac{\frac{x^2-2}{x}}{e^x} = \left(\frac{\infty}{\infty}\right)\]
+	Y como $e^x \gg \frac{x^2 - 2}{x}$:
+	\[\dlim_{x\to \infty}\frac{\frac{x^2-2}{x}}{e^x} = 0\]
 \end{examplebox}
-\par \todo{Ejemplo indeterminación 0/0}
 
 \subsubsection{Indeterminación \texorpdfstring{$\left(\dfrac{\infty}{\infty}\right)$}{(∞/∞)}}
 Esta indeterminación se resuelve atendiendo a qué orden es mayor, si el orden del infinito del numerador, o el del denominador. Podemos clasificar los órdenes de la siguiente manera:
 \[x^x \gg a^x \gg x^n \gg x \gg x^{\frac1{n}} \gg \log{x};\quad \text{con}\ n \in \mathbb{N}\]
 En el caso de que ambas funciones tengan el mismo orden, se compara el grado del numerador frente al del denominador, para determinar cuál ``gana''. Si gana el numerador, el resultado del límite es $\infty$, y si gana el denominador, el resultado es 0.
-\par \todo{Ejemplo indeterminación $\left(\dfrac{\infty}{\infty}\right)$}
+\par En el caso de cocientes de polinomios, se pueden despreciar los términos de orden menor al dominante dentro del numerador y del denominador. Esto quiere decir, que si el numerador es un polinomio de grado 2, se pueden descartar todos los términos de grado menor que 2 en el numerador; y si el denominador es un polinomio de grado 3, se pueden despreciar todos los términos de denominador de grado menor que 3.
+
+\begin{examplebox}
+	\textbf{Ejemplo 1:}
+	\par \(\dlim_{x\to \infty}\frac{x - 2}{x^2 - 4} = \left(\frac{\infty}{\infty}\right)\)
+	\par En este caso, podemos despreciar los términos de menor orden en el numerador y denominador:
+	\[\dlim_{x\to \infty}\frac{x - 2}{x^2 - 4} = \dlim_{x \to \infty} \frac{x}{x^2} = \dlim_{x \to \infty} \frac1{x} = \left(\frac{1}{\infty}\right) = 0\]
+
+	\vspace{2em}
+	\textbf{Ejemplo 2:}
+	\par \(\dlim_{x\to \infty}\frac{x^3 - x + 1}{\ln(x^2)} = \left(\frac{\infty}{\infty}\right)\)
+	\par Para resolver este límite debemos considerar que $\ln(x^2) = 2\ln(x)$, y que $x^3 \gg \ln(x)$, por lo que sabemos que gana el numerador. Entonces:
+	\[\dlim_{x \to \infty}\frac{x^3 - x + 1}{\ln(x^2)} = \dlim_{x \to \infty}\frac{x^3}{2\ln(x)} = \infty\]
+\end{examplebox}
 
 \subsubsection{Indeterminación \texorpdfstring{$\infty-\infty$}{∞-∞}}
 En este caso, la forma de evitar la indeterminación es convertirla a una del tipo de $\frac{\infty}{\infty}$ o del tipo $\frac{0}{0}$, que ya es conocido el método para resolverlas. Esto se hace multiplicando y dividiendo por la expresión conjugada.
